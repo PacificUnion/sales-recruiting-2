@@ -136,12 +136,14 @@ $(function() {
                 $('.block-2').addClass('active'),
                 $('.block-1').removeClass('active'),
                 $('.block-3').removeClass('active');
+                $('.map-usa').removeClass('active');
 
             });
             $('.block-3').click(function(){
                 $('.block-3').addClass('active'),
                 $('.block-2').removeClass('active'),
                 $('.block-1').removeClass('active');
+                $('.map-usa').removeClass('active');
 
             });
 
