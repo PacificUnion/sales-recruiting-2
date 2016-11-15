@@ -1,0 +1,52 @@
+.map-usa
+	background: transparent url(../images/map-usa.gif) 
+	background-position: 50% 100%
+	background-size: cover 
+	background-repeat: no-repeat 
+	// height: 90vh
+	width: 75%
+	left: 25%
+	position: absolute
+	top: 0
+	opacity: 0
+	// padding-bottom: 56.25%
+	padding-bottom: 90%
+	overflow: hidden
+	&.active
+		opacity: 1
+	
+	.pin
+		width: 35px
+		height: 40px
+		z-index: 2 
+		position: absolute
+		&-1
+			top: 45.5%
+			left: 20.5%
+		&-2
+			top: 57%
+			left: 48% 
+		&-3
+			top: 48.5%
+			left: 72% 
+		&-4
+			top: 44.5%
+			left: 73.5%
+		&-text
+			font-family: 'Gotham Book'  
+			color: $white
+			top: 75%
+			left: 55%
+			display: inline-block
+			width: 20%
+			img
+				padding-right: 2rem
+		&-color
+			font-family: 'Gotham Book'  
+			color: $white
+			top: 70%
+			left: 65%
+			display: inline-block
+			width: 20%
+			img
+				padding-right: 2rem
