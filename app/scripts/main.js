@@ -94,9 +94,7 @@ $(function() {
         // $.preloadImages("img/yellowstone-thermal.jpg","img/yosemite-rock.jpg","img/big-bend.jpg","img/canyonlands.jpg","img/grand-canyon-2.jpg","img/grand-teton.jpg","img/great-sand-dunes.jpg","img/hawaii-volcano.jpg","img/redwood-path.jpg","img/roosevelt-sitting.jpg","img/smoky-mountains.jpg");
         afterLoad: function(anchorLink, index){
             if(index == 1 || index >= 11){
-                $('#fp-nav').css('display', 'none');               
-            }else{
-                $('#fp-nav').css('display', 'block');
+           
             }
             if(index == 2){
          
@@ -130,14 +128,14 @@ $(function() {
                 $('.block-1').addClass('active'),
                 $('.block-2').removeClass('active'),
                 $('.block-3').removeClass('active'),
-                $('.map-usa').addClass('active');
+                $('.map-wrapper').addClass('active');
                 $('.graph-wrapper').removeClass('active');
             });
             $('.block-2').click(function(){
                 $('.block-2').addClass('active'),
                 $('.block-1').removeClass('active'),
                 $('.block-3').removeClass('active'),
-                $('.map-usa').removeClass('active'),
+                $('.map-wrapper').removeClass('active'),
                 $('.graph-wrapper').addClass('active');
 
             });
@@ -145,7 +143,7 @@ $(function() {
                 $('.block-3').addClass('active'),
                 $('.block-2').removeClass('active'),
                 $('.block-1').removeClass('active');
-                $('.map-usa').removeClass('active');
+                $('.map-wrapper').removeClass('active');
                 $('.graph-wrapper').removeClass('active');
             });
 
