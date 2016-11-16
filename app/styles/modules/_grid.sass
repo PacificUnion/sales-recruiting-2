@@ -7,9 +7,11 @@
 	
 	.double, .single
 		width: 100%
+		height: 50%
 		transition: width 150ms ease-in
 		float: left
 		h3, p
+			transition: all 300ms ease-in 700ms
 			color: $white
 			padding: 1rem 3rem
 			text-align: left
@@ -59,6 +61,8 @@
 			width: 33.33%
 			height: 33.33%
 		.frame
+			&-3, &-4, &-9
+				display: none
 			&-text
 				padding-top: 5rem
 			p
@@ -66,9 +70,7 @@
 			h3
 				font-size: 3rem
 	@media screen and (min-width: 1024px)
-		.frame
-			&-3, &-4, &-9
-				display: none
+		.frame			
 			&-text
 				padding-top: 7rem
 			h3, p
