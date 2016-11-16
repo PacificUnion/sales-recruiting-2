@@ -1,5 +1,3 @@
-
-
 $(function() {
 
   
@@ -49,10 +47,7 @@ $(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        // sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
-
-        // paddingTop: '3em',
-        // paddingBottom: '10px',
+       
         fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu',
         responsiveWidth: 0,
         responsiveHeight: 0,
@@ -64,12 +59,6 @@ $(function() {
 
         //events
         onLeave: function(index, nextIndex, direction){
-
-            // if(index == '1' && nextIndex == '2' ){
-            //      $('.img-block').css('z-index', '-2');
-
-            //      console.log(index + ' ' + nextIndex);
-            // }
 
             if(index == 2 && nextIndex == 1 ){
                
@@ -83,9 +72,9 @@ $(function() {
                 $('#fp-nav').css('display', 'none'); 
 
             }
-           
 
         },
+
         // $.preloadImages = function() {
         //     for (var i = 0; i < arguments.length; i++) {
         //         $("<img />").attr("src", arguments[i]);
@@ -120,8 +109,7 @@ $(function() {
                 $('.nav-local').toggleClass('active');
             });
 
-            // var tween = TweenMax.to(.menu, 2, {left:"0", ease:Linear.easeNone});
-            //playing the video
+          
             $('video').get(0).play();
 
             $('.block-1').click(function(){
