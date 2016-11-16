@@ -49,7 +49,7 @@ $(function() {
         //Design
         controlArrows: true,
         verticalCentered: true,
-        sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
+        // sectionsColor: ['transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent', 'transparent'],
 
         // paddingTop: '3em',
         // paddingBottom: '10px',
@@ -131,12 +131,14 @@ $(function() {
                 $('.block-2').removeClass('active'),
                 $('.block-3').removeClass('active'),
                 $('.map-usa').addClass('active');
+                $('.graph-wrapper').removeClass('active');
             });
             $('.block-2').click(function(){
                 $('.block-2').addClass('active'),
                 $('.block-1').removeClass('active'),
-                $('.block-3').removeClass('active');
-                $('.map-usa').removeClass('active');
+                $('.block-3').removeClass('active'),
+                $('.map-usa').removeClass('active'),
+                $('.graph-wrapper').addClass('active');
 
             });
             $('.block-3').click(function(){
@@ -144,7 +146,7 @@ $(function() {
                 $('.block-2').removeClass('active'),
                 $('.block-1').removeClass('active');
                 $('.map-usa').removeClass('active');
-
+                $('.graph-wrapper').removeClass('active');
             });
 
         }
