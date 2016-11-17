@@ -91,8 +91,12 @@ $(function() {
              
                 }
                 if(index == 3){
-                    $('.map-usa').addClass('active');    
-              
+                    $('.block-1').addClass('active'),
+                    $('.block-2').removeClass('active'),
+                    $('.block-3').removeClass('active'),
+                    $('.map-wrapper').addClass('active'),
+                    $('.achievements-wrapper').removeClass('active'),
+                    $('.graph-wrapper').removeClass('active');
                 }
                 if(index == 4){
               
