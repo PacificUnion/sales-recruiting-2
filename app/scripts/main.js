@@ -1,6 +1,6 @@
 $(function() {
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log("mobile phone")
+        console.log('mobile phone')
     }else{
 
         $('#fullpage').fullpage({
@@ -50,14 +50,14 @@ $(function() {
             controlArrows: true,
             verticalCentered: true,
            
-            fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu',
+            fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
             responsiveWidth: 0,
             responsiveHeight: 0,
             responsiveSlides: false,
 
             //Custom selectors
             sectionSelector: '.section',
-            slideSelector: '.slide',
+            slideSelector: '.slide-2',
 
             //events
             onLeave: function(index, nextIndex, direction){
@@ -67,6 +67,16 @@ $(function() {
                     $('video').get(0).play();
                     $('#fp-nav').css('display', 'none'); 
 
+                }
+
+                if(index == 2 && nextIndex == 3  ){
+                    $('.block-1').addClass('active'),
+                    $('.map-wrapper').addClass('active');
+                }
+
+                if(index == 3 && nextIndex != 3  ){
+                    $('.block-1').removeClass('active'),
+                    $('.map-wrapper').removeClass('active');
                 }
 
                 if(index == 10 && nextIndex == 11 ){
@@ -86,6 +96,9 @@ $(function() {
             afterLoad: function(anchorLink, index){
                 if(index == 1 || index >= 11){
                
+                }
+                if(index == 1 ){
+                    $('video').get(0).play();
                 }
                 if(index == 2){
              
@@ -142,6 +155,23 @@ $(function() {
                     $('.map-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active'),
                     $('.achievements-wrapper').addClass('active');
+                });
+
+                $('.video-frame-1, #video-testimonial-1 ').click(function(){
+                    $('#video-testimonial-1').toggleClass('active');
+                });
+                $('.video-frame-2, #video-testimonial-2 ').click(function(){
+                    $('#video-testimonial-2').toggleClass('active');
+                });
+                $('.video-frame-3, #video-testimonial-3 ').click(function(){
+                    $('#video-testimonial-3').toggleClass('active');
+                });
+
+                $('#contact-us').click(function(){
+                    $('.form-contact').addClass('active');
+                });
+                $('.form-contact .close').click(function(){
+                    $('.form-contact').removeClass('active');
                 });
 
             }
