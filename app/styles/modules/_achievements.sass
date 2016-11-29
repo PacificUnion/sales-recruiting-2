@@ -1,21 +1,22 @@
 .achievements-wrapper
+	height: 80%
+	width: 100%
+	left: 0
 	position: absolute
-	height: 100%
-	width: 75%
-	top: 0
-	left: 25%
+	top: 20%
 	opacity: 0 
 	transition: opacity 300ms ease-in
 	h2
 		color: $white
 		font-family: 'Droid Serif'
-		font-size: 4rem
-		padding-top: 15%
+		font-size: 2rem
+		padding-top: 5%
+		text-align: center
 		  
 	p
 		color: $white
 		font-family: 'Gotham Book' 
-		font-size: 2rem
+		font-size: 1.5rem
 		width: 70%
 		margin-left: 15%
 		padding: 5% 0 5%
@@ -25,8 +26,8 @@
 		width: 70%
 		margin-left: 15%
 		.badge
-			width: 17%
-			margin: 0 2rem
+			width: 20%
+			margin: 0 1rem
 			transform: scale(0)
 			
 	&.active
@@ -40,11 +41,57 @@
 						delay: (150ms * $i)
 						timing-function: ease-in-out
 						fill-mode: forwards
-						
-	@keyframes grow
-		0%
-			transform: rotate(45deg) scale(0)
-		100%
-			transform: rotate(0deg) scale(1)
-		
+							
+
+@media screen and (min-width: 768px)
+	.achievements-wrapper
+		position: absolute
+		height: 100%
+		width: 75%
+		top: 0
+		left: 25%
+		opacity: 0 
+		transition: opacity 300ms ease-in
+		h2
+			color: $white
+			font-family: 'Droid Serif'
+			font-size: 4rem
+			padding-top: 15%
+			text-align: center
+			  
+		p
+			color: $white
+			font-family: 'Gotham Book' 
+			font-size: 2rem
+			width: 70%
+			margin-left: 15%
+			padding: 5% 0 5%
+		.badges
+			position: absolute
+			top: 50%
+			width: 70%
+			margin-left: 15%
+			.badge
+				width: 17%
+				margin: 0 2rem
+				transform: scale(0)
+				
+		&.active
+			opacity: 1
+			.badge
+				@for $i from 1 through 5
+					&:nth-child(#{$i})
+						animation: 
+							name: grow
+							duration: 500ms
+							delay: (150ms * $i)
+							timing-function: ease-in-out
+							fill-mode: forwards
+							
+@keyframes grow
+	0%
+		transform: rotate(45deg) scale(0)
+	100%
+		transform: rotate(0deg) scale(1)
+	
 

@@ -1,6 +1,6 @@
 .nav-wrapper
 	position: fixed
-	top: 1%
+	top: 0
 	right: 2%
 	width: 50px
 	z-index: 50
@@ -44,3 +44,9 @@
 		&:hover
 			color: $green
 			background-color: none 
+
+@media screen and (min-width: 768px)
+	.nav-wrapper
+		position: fixed
+		top: 1%
+		
