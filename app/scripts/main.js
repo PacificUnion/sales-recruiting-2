@@ -1,7 +1,7 @@
 $(function() {
-    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
-        console.log('mobile phone')
-    }else{
+    // if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+    //     console.log('mobile phone')
+    // }else{
 
         $('#fullpage').fullpage({
 
@@ -51,7 +51,7 @@ $(function() {
             verticalCentered: true,
            
             fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
-            responsiveWidth: 0,
+            responsiveWidth: 768,
             responsiveHeight: 0,
             responsiveSlides: false,
 
@@ -179,6 +179,6 @@ $(function() {
         	// scrollOverflow: true,
         	// normalScrollElements: '.history-block'
         });
-    } 
+    // } 
 });
 
