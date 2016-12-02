@@ -1,5 +1,5 @@
 .video-overlay
-	position: absolute
+	position: fixed
 	width: 100%
 	height: 100vh
 	background-color: rgba(0,0,0,0.7)
@@ -61,12 +61,12 @@
 		.close-video
 			span:nth-child(1) 
 			    transform: rotate(45deg)
-			    top: 0px
-			    left: 8px
+			    top: 9px
+			    left: 0
 			span:nth-child(2) 
 			    transform: rotate(-45deg)
-			    top: 0px
-			    left: 8px
+			    top: 9px
+			    left: 0
 			    
 
 @media screen and (min-width: 768px)
@@ -104,13 +104,6 @@
 				transition: .25s ease-in-out 300ms
 				transform: rotate(0deg)
 
-			span:nth-child(1) 
-			    top: 0px
-			    transform-origin: center
-			    
-			span:nth-child(2) 
-			    top: 0px
-			    transform-origin: center
 
 		video
 			position: absolute
@@ -130,30 +123,6 @@
 				opacity: 1
 				transform: scale(1)
 				
-			.close-video
-				span:nth-child(1) 
-				    transform: rotate(45deg)
-				    top: 0px
-				    left: 8px
-				span:nth-child(2) 
-				    transform: rotate(-45deg)
-				    top: 0px
-				    left: 8px
+			
 					
 					
-		
-
-		
-	//     // z-index: 500
-
-	// #nav-icon span 
-	//     display: block
-	//     position: absolute
-	//     height: 4px
-	//     width: 100%
-	//     background: #ffffff
-	//     border-radius: 9px
-	//     opacity: 1
-	//     left: 0
-	//     transform: rotate(0deg)
-	//     transition: .25s ease-in-out

@@ -8,7 +8,7 @@ $(function() {
             //Navigation
             menu: false,
             lockAnchors: false,
-            anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+            anchors: ['Home', 'Testimonials', 'Growth', 'Culture', 'Contact-Us'],
             navigation: false,
             navigationPosition: 'left',
             navigationTooltips: [],
@@ -50,7 +50,7 @@ $(function() {
             controlArrows: true,
             verticalCentered: true,
            
-            fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact',
+            fixedElements: '#header, .footer, #navigation, .nav-wrapper, .menu, .form-contact, .video-overlay', 
             responsiveWidth: 768,
             responsiveHeight: 0,
             responsiveSlides: false,
@@ -66,7 +66,7 @@ $(function() {
                    
                     $('video').get(0).play();
                     $('#fp-nav').css('display', 'none'); 
-
+                    $('.logo-wrapper').css('display', 'block');
                 }
 
                 if(index == 2 && nextIndex == 3  ){
@@ -99,9 +99,11 @@ $(function() {
                 }
                 if(index == 1 ){
                     $('video').get(0).play();
+                }else{
+                    $('.logo-wrapper').css('display', 'none');   
                 }
                 if(index == 2){
-             
+                    $('.logo-wrapper').css('display', 'none');
                 }
                 if(index == 3){
                     $('.block-1').addClass('active'),
@@ -173,6 +175,40 @@ $(function() {
                 $('.form-contact .close').click(function(){
                     $('.form-contact').removeClass('active');
                 });
+
+                function submitForm() {
+                    var form = $('#recruiting-site-form');
+                    var formData = $(form).serialize();
+
+                    if ($('#recruiting-site-form')[0].checkValidity()) {
+                        document.getElementById('form-submit').setAttribute('disabled', 'true');
+                        $.ajax({
+                            type: 'POST',
+                            url: '../assets/php-email-services/recruiting-site-email-service.php',
+                            data: formData
+                        })
+                            .done(function(response) {
+                                $('#recruiting-site-form')[0].reset();
+                                // Make sure that the formMessages div has the 'success' class.
+
+                                setTimeout(function() {
+                                    $('.form-contact').addClass('success');
+                                    document.getElementById('form-submit').disabled = false;
+                                }, 500);
+
+                            })
+                            .fail(function(data) {
+                                // Make sure that the formMessages div has the 'error' class.
+                            });
+                    } else {
+                        $('#recruiting-site-form :input:visible[required="required"]').each(function() {
+                            if (!this.validity.valid) {
+                                $(this).focus();
+                                return false;
+                            }
+                        })
+                    }
+                }
 
             }
       
