@@ -33,14 +33,13 @@
 		position: absolute 
 		width: 100%
 		height: 100%
-		top: 0
+		top: 5%
 		left: 0
 		padding-bottom: 63.32%
 	.map-text
 		color: $white
 		font-family: 'Gotham Book'
 		font-size: 1.5rem
-		 
 		top: 7% 
 		position: absolute
 		width: 90%
@@ -48,7 +47,7 @@
 		line-height: 2rem
 	.pin-container
 		position: absolute
-		top: 50%
+		top: 55%
 		width: 80%
 		margin-left: 10%
 		margin-top: -31.66%
@@ -62,7 +61,8 @@
 		transform: translate(0px, -30px) scale(0)
 		img
 			width: 10px
-			height: 15px
+			height: auto
+			bottom: 0
 		&-1
 			top: 43%
 			left: 14.5%
@@ -166,7 +166,6 @@
 			position: absolute 
 			width: 100%
 			height: 100%
-			top: 0
 			left: 0
 			padding-bottom: 63.32%
 		.map-text
@@ -180,21 +179,19 @@
 			line-height: 3rem
 		.pin-container
 			position: absolute
-			top: 50%
 			width: 80%
 			margin-left: 10%
 			margin-top: -31.66%
 			padding-bottom: 63.32%
 		.pin
-			width: 35px
-			height: 40px
 			z-index: 2 
 			position: absolute
 			transition: all 300ms ease-in 300ms
 			transform: translate(0px, -30px) scale(0)
 			img
-				width: auto
-				height: auto
+				width: 20px
+				height: 25px
+				
 			&-1
 				top: 43%
 				left: 14.5%
@@ -261,7 +258,18 @@
 				margin-left: 2rem
 				text-align: left
 					
-				
+@media screen and (min-width: 1024px)
+	.map-wrapper
+		.pin 
+			img
+				width: 23px
+				height: auto
+@media screen and (min-width: 1440px)
+	.map-wrapper
+		.pin 
+			img
+				width: 26px
+				height: auto
 @keyframes ping
 	0%
 		transform: translate(0px, -30px) scale(0.3)

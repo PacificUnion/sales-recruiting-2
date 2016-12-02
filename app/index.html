@@ -130,8 +130,9 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <video muted preload="auto" autoplay="true" poster="" controls>
-                        <source src="./video/Instagram-Habitat-for-Humanity.mp4" type="video/mp4">
+                    <video preload="auto" autoplay controls>
+                        <source src="./video/Nate.webm" type="video/webm">
+                        <source src="./video/Nate.mp4" type="video/mp4">
                         <!-- <source src="video/Loop_gray.webm" type="video/webm"> -->
                     </video>
                 </div>
@@ -140,9 +141,9 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <video muted preload="auto" autoplay="true" poster="" controls>
-                        <source src="./video/Instagram-Habitat-for-Humanity.mp4" type="video/mp4">
-                        <!-- <source src="video/Loop_gray.webm" type="video/webm"> -->
+                    <video preload="auto" autoplay="true" poster="" controls>
+                        <source src="./video/2016_LO-Rusty-Mendoza.webm" type="video/webm">
+                        <source src="./video/2016_LO-Rusty-Mendoza.mp4" type="video/mp4">
                     </video>
                 </div>
                 <div class="video-overlay" id="video-testimonial-3">
@@ -150,9 +151,9 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <video muted preload="auto" autoplay="true" poster="" controls>
-                        <source src="./video/Instagram-Habitat-for-Humanity.mp4" type="video/mp4">
-                        <!-- <source src="video/Loop_gray.webm" type="video/webm"> -->
+                    <video preload="auto" autoplay="true" poster="" controls>
+                        <source src="./video/2016_Yvette.mp4" type="video/mp4">
+                        <source src="./video/2016_Yvette.webm" type="video/webm">
                     </video>
                 </div>
             </div><!-- end section  -->
@@ -170,19 +171,19 @@
                     <div class="pin-container">
                         <div class="pin pin-1">
                             <img src="./images/green-location-icon.png" alt="">
-                            <div class="tooltip">Somewhere, CA</div>
+                            <div class="tooltip">Costa Mesa, CA</div>
                         </div>
                         <div class="pin pin-2">
                             <img src="./images/green-location-icon.png" alt="">
-                            <div class="tooltip">Somewhere, CA</div>
+                            <div class="tooltip">Irving, TX</div>
                         </div>
                         <div class="pin pin-3">
                             <img src="./images/green-location-icon.png" alt="">
-                            <div class="tooltip">Somewhere, CA</div>
+                            <div class="tooltip">Fairfax, VA</div>
                         </div>
                         <div class="pin pin-4">
                             <img src="./images/green-location-icon.png" alt="">
-                            <div class="tooltip">Somewhere, CA</div>
+                            <div class="tooltip">Charlotte, NC</div>
                         </div>
                     </div>
                     <div class="legend legend-text"><img src="./images/green-location-icon.png" alt=""><span>Fullfillment Centers</span></div>
@@ -509,7 +510,41 @@
     </div>
 
   </div> <!--  end fullpage  -->
+    <script>
+         function submitForm() {
+                    var form = $('#recruiting-site-form');
+                    var formData = $(form).serialize();
 
+                    if ($('#recruiting-site-form')[0].checkValidity()) {
+                        // document.getElementById('form-submit').setAttribute('disabled', 'true');
+                        $.ajax({
+                            type: 'POST',
+                            url: '../assets/php-email-services/recruiting-site-email-service.php',
+                            data: formData
+                        })
+                            .done(function(response) {
+                                $('#recruiting-site-form')[0].reset();
+                                // Make sure that the formMessages div has the 'success' class.
+
+                                setTimeout(function() {
+                                    $('.form-contact').addClass('success');
+                                    document.getElementById('form-submit').disabled = false;
+                                }, 500);
+
+                            })
+                            .fail(function(data) {
+                                // Make sure that the formMessages div has the 'error' class.
+                            });
+                    } else {
+                        $('#recruiting-site-form :input:visible[required="required"]').each(function() {
+                            if (!this.validity.valid) {
+                                $(this).focus();
+                                return false;
+                            }
+                        })
+                    }
+                }
+    </script>
     
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
