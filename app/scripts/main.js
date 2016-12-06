@@ -202,41 +202,6 @@ $(function() {
                 $('.form-contact .close').click(function(){
                     $('.form-contact').removeClass('active');
                 });
-
-                function submitForm() {
-                    var form = $('#recruiting-site-form');
-                    var formData = $(form).serialize();
-
-                    if ($('#recruiting-site-form')[0].checkValidity()) {
-                        document.getElementById('form-submit').setAttribute('disabled', 'true');
-                        $.ajax({
-                            type: 'POST',
-                            url: '../assets/php-email-services/recruiting-site-email-service.php',
-                            data: formData
-                        })
-                            .done(function(response) {
-                                $('#recruiting-site-form')[0].reset();
-                                // Make sure that the formMessages div has the 'success' class.
-
-                                setTimeout(function() {
-                                    $('.form-contact').addClass('success');
-                                    document.getElementById('form-submit').disabled = false;
-                                }, 500);
-
-                            })
-                            .fail(function(data) {
-                                // Make sure that the formMessages div has the 'error' class.
-                            });
-                    } else {
-                        $('#recruiting-site-form :input:visible[required="required"]').each(function() {
-                            if (!this.validity.valid) {
-                                $(this).focus();
-                                return false;
-                            }
-                        })
-                    }
-                }
-
             }
       
         	// scrollOverflow: true,

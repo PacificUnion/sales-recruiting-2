@@ -25,6 +25,7 @@
 		top: 50%
 		width: 70%
 		margin-left: 15%
+		transform: translateY(-50%)
 		.badge
 			width: 20%
 			margin: 0 1rem
@@ -68,12 +69,13 @@
 			padding: 5% 0 5%
 		.badges
 			position: absolute
-			top: 45%
+			top: 50%
 			width: 70%
 			margin-left: 15%
+			
 			.badge
-				width: 18%
-				margin: 0 1.5rem
+				width: 19%
+				margin: 0 1.7rem
 				transform: scale(0)
 				
 		&.active
@@ -87,6 +89,19 @@
 							delay: (150ms * $i)
 							timing-function: ease-in-out
 							fill-mode: forwards
+							
+@media screen and (min-width: 1024px)
+	.achievements-wrapper
+		.badges
+			.badge
+				width: 20%
+
+@media screen and (min-width: 1440px)
+	.achievements-wrapper
+		.badges
+			.badge
+				width: 15%
+
 							
 @keyframes grow
 	0%
