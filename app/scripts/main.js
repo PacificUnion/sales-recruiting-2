@@ -196,7 +196,7 @@ $(function() {
                     $('video').get(3).play();
                 });
 
-                $('#contact-us').click(function(){
+                $('#contact-button').click(function(){
                     $('.form-contact').addClass('active');
                 });
                 $('.form-contact .close').click(function(){
