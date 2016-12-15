@@ -185,15 +185,15 @@ $(function() {
 
                 $('.video-frame-1, #video-testimonial-1 ').click(function(){
                     $('#video-testimonial-1').toggleClass('active');
-                    $('video').get(1).play();
+                    // $('video').get(1).play();
                 });
                 $('.video-frame-2, #video-testimonial-2 ').click(function(){
                     $('#video-testimonial-2').toggleClass('active');
-                    $('video').get(2).play();
+                    // $('video').get(2).play();
                 });
                 $('.video-frame-3, #video-testimonial-3 ').click(function(){
                     $('#video-testimonial-3').toggleClass('active');
-                    $('video').get(3).play();
+                    // $('video').get(3).play();
                 });
 
                 $('#contact-button').click(function(){
