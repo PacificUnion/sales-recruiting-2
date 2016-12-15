@@ -185,16 +185,28 @@ $(function() {
 
                 $('.video-frame-1, #video-testimonial-1 ').click(function(){
                     $('#video-testimonial-1').toggleClass('active');
-                    // $('video').get(1).play();
+                    $('video').get(1).play();
+                    if(!$('#video-testimonial-1').hasClass('active')){
+                        $('video').get(1).pause();
+                    }
                 });
                 $('.video-frame-2, #video-testimonial-2 ').click(function(){
                     $('#video-testimonial-2').toggleClass('active');
-                    // $('video').get(2).play();
+                    $('video').get(2).play();
+                    if(!$('#video-testimonial-2').hasClass('active')){
+                        $('video').get(2).pause();
+                    }
                 });
                 $('.video-frame-3, #video-testimonial-3 ').click(function(){
                     $('#video-testimonial-3').toggleClass('active');
-                    // $('video').get(3).play();
+                    $('video').get(3).play();
+                    if(!$('#video-testimonial-3').hasClass('active')){
+                        $('video').get(3).pause();
+                    }
+
                 });
+
+
 
                 $('#contact-button').click(function(){
                     $('.form-contact').addClass('active');
