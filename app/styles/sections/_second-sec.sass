@@ -1,5 +1,5 @@
 .second-sec
-	margin-bottom: 445px
+	margin-bottom: 460px
 	.event
 		float: left
 		width: 90%
@@ -13,7 +13,7 @@
 		position: relative
 		left: 0
 		margin-left: -21%
-		top: 50%
+		top: 60%
 		// overflow: hidden
 		
 		.video-frame
@@ -44,16 +44,6 @@
 				border: 15px solid rgba(0,0,0,0.2)
 				span
 					opacity: 1
-			// &-1
-				
-			// &-2
-			// 	background-image: url(../images/LO-Youtube-Rusty.jpg)
-			// 	// left: 33.33%
-			// &-3
-			// 	background-image: url(../images/LO-Youtube-Yvette.jpg)
-				// left: 66.66%
-				
-		
 		.play-button
 			position: absolute
 			z-index: 5
@@ -65,15 +55,7 @@
 			transition: all 150ms ease
 			pointer-events: none
 			top: 55%
-			// display: none
-			// &:hover
-			// 	transform: scale(0.95)
-			// &-1
-			// 	left: 7%
-			// &-2
-			// 	left: 40%
-			// &-3
-			// 	left: 73%
+			
 		.person-img
 			width: 50%
 			height: auto
@@ -85,10 +67,39 @@
 				
 	.arrow
 		position: absolute
-		top: 160%
+		top: 170%
 		left: 50%
 		border-color: transparent transparent $dark-gray $dark-gray
 		
+@media screen and (min-width: 360px)
+	.second-sec
+		margin-bottom: 445px
+		.event
+			top: -5%
+		.video-block
+			top: 50%
+		.arrow
+			top: 160%
+			
+@media screen and (min-width: 375px)
+	.second-sec
+		margin-bottom: 445px
+		.event
+			top: -5%
+		.video-block
+			top: 44%
+		.arrow
+			top: 156%
+@media screen and (min-width: 414px)
+	.second-sec
+		margin-bottom: 435px
+		.event
+			top: -5%
+		.video-block
+			top: 38%
+		.arrow
+			top: 150%
+						
 
 @media screen and (min-width: 768px)	
 	.second-sec
@@ -105,7 +116,7 @@
 		
 		.video-block
 			width: 100%
-			height: 33%
+			height: 25%
 			position: absolute
 			left: 0
 			top: 33%
@@ -123,12 +134,13 @@
 				span
 					opacity: 1
 					color: $white
-					top: 90%
+					top: 5%
 					// left: 5%
 					position: absolute
 					font-family: 'Gotham Bold'
 					font-size: 2rem
-					// display: block
+					br
+						display: none
 					 
 				&:hover
 					border: 15px solid rgba(0,0,0,0.2)
@@ -140,30 +152,14 @@
 					left: 33.33%
 				&-3
 					left: 66.66%
-					
-			
-			// .play-button
-			// 	position: absolute
-			// 	z-index: 5
-			// 	width: 3%
-			// 	height: auto
-			// 	transform: scale(1)
-			// 	transition: all 150ms ease
-			// 	pointer-events: none
-			// 	top: 75% 
-			// 	display: block
-			// 	// &:hover
-			// 	// 	transform: scale(0.95)
-			// 	&-1
-			// 		left: 29%
-			// 	&-2
-			// 		left: 62.33%
-			// 	&-3
-			// 		left: 95.66%
-					
+						
 		.arrow
 			position: absolute
 			top: 90%
 			left: 50%
-			
 			border-color: transparent transparent $dark-gray $dark-gray
+
+@media screen and (min-width: 1440px)
+	.second-sec
+		.video-block
+			height: 35%
