@@ -207,7 +207,6 @@ $(function() {
                 });
 
 
-
                 $('#contact-button').click(function(){
                     $('.form-contact').addClass('active');
                 });
