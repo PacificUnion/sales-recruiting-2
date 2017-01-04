@@ -1,3 +1,34 @@
+// preloader spinner
+$(window).on('load', function(){
+    $('.spinner_hol').fadeIn('fast');
+    $('.spinner svg').css('visibility', 'visible');
+
+    function animate() {
+        TweenMax.set('.house-icon-line', {drawSVG: 0});
+        TweenMax.to('.house-icon-line', 3, {drawSVG: true});
+        TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
+    }
+
+    animate();
+    setTimeout(function(){
+        $('.spinner_hol').fadeOut('slow', function(){
+            $('.spinner svg').css('visibility', 'hidden');
+        });
+    }, 2000);
+});
+
+
+$(function() {
+    // ios8 test
+    var isIOS8 = function() {
+      var deviceAgent = navigator.userAgent.toLowerCase();
+      return /(iphone|ipod|ipad).* os 8_/.test(deviceAgent);
+    }
+
+    if( isIOS8() == true ){
+        $('.spinner_hol').css('display', 'none');
+    }
+});
 
 
 $(function() {

@@ -24,7 +24,7 @@
         <!-- endbuild -->
 
         <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="/bower_components/modernizr/modernizr.js"></script>
+        
         <!-- endbuild -->
        
     </head>
@@ -180,8 +180,8 @@
                         <span></span>
                     </div>
                     <video preload="none" autoplay="true" poster="" controls>
-                        <source src="./video/2016_Yvette.mp4" type="video/mp4">
                         <source src="./video/2016_Yvette.webm" type="video/webm">
+                        <source src="./video/2016_Yvette.mp4" type="video/mp4">
                     </video>
                 </div>
             </div><!-- end section  -->
@@ -601,31 +601,12 @@
     
     <!-- build:js scripts/plugins.js -->
     <!-- endbuild -->
-     <script>
-            // preloader
-            $(window).on('load', function(){
-                $('.spinner_hol').fadeIn('fast');
-                $('.spinner svg').css('visibility', 'visible');
-
-                function animate() {
-                    TweenMax.set('.house-icon-line', {drawSVG: 0});
-                    TweenMax.to('.house-icon-line', 3, {drawSVG: true});
-                    TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
-                }
-
-                animate();
-                setTimeout(function(){
-                    $('.spinner_hol').fadeOut('slow', function(){
-                        $('.spinner svg').css('visibility', 'hidden');
-                        
-                    });
-                }, 2000);
-            });
-        </script>
+    
     <!-- build:js scripts/main.js -->
 
     <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <!-- endbuild -->
-  </body>
+
+    </body>
 </html>
