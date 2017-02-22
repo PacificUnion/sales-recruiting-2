@@ -30,7 +30,18 @@
 			width: 20%
 			margin: 0 1rem
 			transform: scale(0)
+		span
+			color: $white
+			font-size: 14px
+			position: absolute
 			
+	.fine-print
+		color: $white
+		font-family: 'Gotham Book'
+		font-size: 12px
+		position: absolute
+		top: 80%
+		left: 20%	
 	&.active
 		opacity: 1
 		.badge
@@ -98,7 +109,11 @@
 		.badges
 			.badge
 				width: 20%
-
+			span
+				font-size: 24px
+		.fine-print
+			top: 90%
+			left: 70%	
 @media screen and (min-width: 1440px)
 	.achievements-wrapper
 		.badges
