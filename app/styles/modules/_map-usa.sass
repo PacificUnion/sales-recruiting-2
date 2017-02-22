@@ -126,8 +126,20 @@
 		span
 			margin-left: 2rem
 			text-align: left
-					
-
+	
+	.arrow
+		position: absolute
+		top: 90%
+		z-index: 100
+	.extra-link
+		font-family: 'Gotham Book'
+		font-size: 14px
+		color: $white			
+		position: absolute
+		width: 100%
+		left: 0
+		z-index: 50
+		
 @media screen and (min-width: 768px)
 	.map-wrapper
 		// background: url(../images/map/gray-bg.png) 
@@ -255,7 +267,14 @@
 			span
 				margin-left: 2rem
 				text-align: left
-					
+				
+		.extra-link
+			top: 85%
+			left: 10% 
+			z-index: 50
+			width: auto
+			 
+
 @media screen and (min-width: 1024px)
 	.map-wrapper
 		.pin 
@@ -268,6 +287,9 @@
 			img
 				width: 26px
 				height: auto
+		.extra-link
+			left: 70%
+			top: 91%
 				
 @media screen and (max-height: 700px) and (min-width: 768px)
 	.map-wrapper
