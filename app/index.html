@@ -14,7 +14,7 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <!-- <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" /> -->
-        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
+       <!--  <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css"> -->
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -76,7 +76,7 @@
                         <li><a href="#Testimonials"><span class="nav-local-title">Testimonials</span></a></li>
                         <li><a href="#Growth"><span class="nav-local-title">Growth</span></a></li>
                         <li><a href="#Culture"><span class="nav-local-title">Culture</span></a></li>
-                        <li><a href="#Contact-Us"><span class="nav-local-title">Contact Us</span></a></li>
+                        <li><a href="#Contact-Us"><span class="nav-local-title nav-contact">Contact Us</span></a></li>
                     </ul>
                 </li>
                 <li class="nav-title">
@@ -104,7 +104,7 @@
                 <li><a href="#Testimonials">Testimonials</a></li>
                 <li><a href="#Growth">Growth</a></li>
                 <li><a href="#Culture">Culture</a></li>
-                <li><a href="#Contact-Us">Contact Us</a></li>
+                <li><a href="#Contact-Us" class="nav-contact">Contact Us</a></li>
             </ul>
             <ul class="links-out">
                 <li><a href="../loan-officer-jobs/">Overview</a></li>
@@ -251,8 +251,12 @@
                     
                     <div class="badges">
                         <img src="./images/achievements/top-10-gov-lender.png" alt="" class="badge">
-                        <img src="./images/achievements/top-25-mort-lender.png" alt="" class="badge">
-                        <img src="./images/achievements/top-5-fha.png" alt="" class="badge">
+                        <a href="http://www.insidemortgagefinance.com/" target="_blank">
+                            <img src="./images/achievements/top-25-mort-lender.png" alt="" class="badge">
+                        </a>
+                        <a href="https://entp.hud.gov/sfnw/public/" target="_blank">
+                            <img src="./images/achievements/top-5-fha.png" alt="" class="badge">
+                        </a>
                         <a href="https://www.google.com/search?q=Pacific%20Union%20Financial%2C%20LLC%20NMLS%20%232221%208900%20Freeport%20Parkway%20%23150%20Irving&ludocid=14131749205967952128&hl=en#hl=en&q=Pacific+Union+Financial%2C+LLC+NMLS+%232221+8900+Freeport+Parkway+%23150+Irving&lrd=0x864c2bd53e112c2b:0xc41e0f0794a0d900,1" target="_blank">
                             <img src="./images/achievements/google-rating.png" alt="" class="badge">
                         </a>
@@ -522,6 +526,28 @@
     </div>
   
     </div> <!--  end fullpage  -->
+
+    <!-- Deffered styles -->
+    <noscript id="deferred-styles">
+      <link rel="stylesheet" type="text/css" href="deffered.css"/>
+      <link rel="stylesheet" type="text/css" href="vendor.css"/>
+    </noscript>
+    <script>
+      var loadDeferredStyles = function() {
+        var addStylesNode = document.getElementById("deferred-styles");
+        var replacement = document.createElement("div");
+        replacement.innerHTML = addStylesNode.textContent;
+        document.body.appendChild(replacement)
+        addStylesNode.parentElement.removeChild(addStylesNode);
+      };
+      var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+          webkitRequestAnimationFrame || msRequestAnimationFrame;
+      if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+      else window.addEventListener('load', loadDeferredStyles);
+    </script>
+
+
+
     <script>
          function submitForm() {
                     var form = $('#recruiting-site-form');
@@ -565,7 +591,6 @@
     <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script>
-    <script src="/bower_components\bootstrap-sass\assets\javascripts\bootstrap\carousel.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
     
