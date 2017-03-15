@@ -1,61 +1,93 @@
 
 .text
-	stroke: $green
+	// stroke: $green
+	stroke: #50ad3c
 	font-family: 'Gotham Book'
 	font-size: 16px
 	transform: rotate(45deg)
 	// transform-origin: 50% 50%
 
-.section	
-	&.active
-		.line, .circle, .divider
-			stroke-dashoffset: 0
-			stroke-dasharray: 1000
-		// p, h1, h3, ul
-		// 	transform: translate(0,0)
-		// 	opacity: 1
-		.date
-			transform: translate(0,-1px)
+.divider
+	stroke: $green
+	// stroke: $text-gray
+	stroke-width: 4
+	fill: none
+	stroke-dasharray: 0
+	stroke-dashoffset: 1000
+	// transition: stroke-dashoffset 1.5s ease-in 0.7s
+
 
 .event
 	background-color: $white
 	float: left
-	width: 33%
 	width: 100%
-	left: 8.5%
 	left: 0
-
 	
-.mobile-img
-	width: 142%
-	height: 200px
-	margin-left: -21%
-	background-size: cover
-	background-position: center
-	background-repeat: no-repeat   
-	
-		
 
+.desktop
+	display: none
+	
+			
 @media screen and (min-width: 768px)
 	
-	p, h1, .text-content ul, h3
+	.text
+		// stroke: $green
+		stroke: #50ad3c
+		font-family: 'Gotham Book'
+		font-size: 16px
+		transform: rotate(45deg)
+		// transform-origin: 50% 50%
+		
+	.divider
+		stroke: $green
+		// stroke: $text-gray
+		stroke-width: 4
+		fill: none
+		stroke-dasharray: 1000
+		stroke-dashoffset: 1000
+		transition: stroke-dashoffset 1.5s ease-in 0.7s
+
+	p, h1
 		opacity: 0
 		transform: translate(-20px, 0)
 		transition: all 300ms ease-in 0.7s
-
+	
 	.section	
 		&.active
 			.line, .circle, .divider
 				stroke-dashoffset: 0
+				// stroke-dashoffset: 0				
 				stroke-dasharray: 1000
-			p, h1, h3, ul
+			p, h1
 				transform: translate(0,0)
 				opacity: 1
 			.date
 				transform: translate(0,-1px)
-	
 	.event
 		width: 33%
 		left: 8.5%
 	.mobile-img
 		display: none
+	
+	.line
+		left: 26.5%
+		
+	.desktop
+		display: block
+	.arrow
+		bottom: 30%
+
+
+	#sec-2, #sec-10, #sec-4, #sec-5, #sec-6, #sec-7, #sec-8, #sec-9, #sec-3
+		.desktop
+			&.arrow
+				display: block
+				left: 26.55%
+				bottom: 5% 
+				// top: 190%
+			
+	
+
+
+
+		
