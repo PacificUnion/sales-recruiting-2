@@ -100,6 +100,11 @@ $(function() {
                     $('video').get(1).pause();
                     $('video').get(2).pause();
                     $('video').get(3).pause();
+                    $('video').get(4).pause();
+                    $('video').get(5).pause();
+                    $('video').get(6).pause();
+                    $('video').get(7).pause();
+                    $('video').get(8).pause();
                 }
 
                 if(index == 2 && nextIndex == 3  ){
@@ -108,6 +113,11 @@ $(function() {
                     $('video').get(1).pause();
                     $('video').get(2).pause();
                     $('video').get(3).pause();
+                    $('video').get(4).pause();
+                    $('video').get(5).pause();
+                    $('video').get(6).pause();
+                    $('video').get(7).pause();
+                    $('video').get(8).pause();
                 }
 
                 if(index == 3 && nextIndex != 3  ){
@@ -139,6 +149,11 @@ $(function() {
                     $('video').get(1).pause();
                     $('video').get(2).pause();
                     $('video').get(3).pause();
+                    $('video').get(4).pause();
+                    $('video').get(5).pause();
+                    $('video').get(6).pause();
+                    $('video').get(7).pause();
+                    $('video').get(8).pause();
                 }
                 if(index == 3){
                     $('.block-1').addClass('active'),
@@ -216,7 +231,48 @@ $(function() {
                     if(!$('#video-testimonial-3').hasClass('active')){
                         $('video').get(3).pause();
                     }
-
+                });
+                 $('.video-frame-4, #video-testimonial-4 ').click(function(){
+                    $('#video-testimonial-4').toggleClass('active');
+                    $('video').get(4).play();
+                    if(!$('#video-testimonial-4').hasClass('active')){
+                        $('video').get(4).pause();
+                    }
+                });
+                $('.video-frame-5, #video-testimonial-5 ').click(function(){
+                    $('#video-testimonial-5').toggleClass('active');
+                    $('video').get(5).play();
+                    if(!$('#video-testimonial-5').hasClass('active')){
+                        $('video').get(5).pause();
+                    }
+                });
+                $('.video-frame-6, #video-testimonial-6 ').click(function(){
+                    $('#video-testimonial-6').toggleClass('active');
+                    $('video').get(6).play();
+                    if(!$('#video-testimonial-6').hasClass('active')){
+                        $('video').get(6).pause();
+                    }
+                });
+                 $('.video-frame-7, #video-testimonial-7 ').click(function(){
+                    $('#video-testimonial-7').toggleClass('active');
+                    $('video').get(7).play();
+                    if(!$('#video-testimonial-7').hasClass('active')){
+                        $('video').get(7).pause();
+                    }
+                });
+                $('.video-frame-8, #video-testimonial-8 ').click(function(){
+                    $('#video-testimonial-8').toggleClass('active');
+                    $('video').get(8).play();
+                    if(!$('#video-testimonial-8').hasClass('active')){
+                        $('video').get(8).pause();
+                    }
+                });
+                $('.video-frame-9').click(function(){
+                    $('#video-testimonial-2').toggleClass('active');
+                    $('video').get(2).play();
+                    if(!$('#video-testimonial-2').hasClass('active')){
+                        $('video').get(2).pause();
+                    }
                 });
 
 

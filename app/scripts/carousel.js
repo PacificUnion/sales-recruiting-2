@@ -66,7 +66,7 @@
 
     function turn() {
         navigate(1);
-        console.log('turned');
+        // console.log('turned');
     }
 
     // Set interval 
