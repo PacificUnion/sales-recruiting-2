@@ -1,0 +1,73 @@
+.carousel-box 
+	font-size: 14px
+	position: relative
+	margin: 1em
+	box-shadow: 2px 2px 10px #ccc
+	background-color: $light-gray 
+	height: 130px
+	overflow: hidden
+	.content 
+		margin: 0
+		padding: 0
+		list-style: none
+
+	.content li 
+		// font-size: 100px
+		margin: 0
+		padding: 0
+		width: 100%
+		list-style: none
+		text-align: center
+		z-index: 2
+
+	li 
+		position: absolute
+		left: 100%
+		opacity: 0
+		// transform: scale(0.5)
+		transition: 1s
+
+	li.current 
+		top: 0px
+		left: 0
+		opacity: 1
+		// transform: scale(1)
+		transition: 1s
+
+.c-next, .c-prev
+	position: absolute
+	color: $text-gray
+	z-index: 50
+	cursor: pointer
+	font-family: 'Gotham Book'
+	text-transform: uppercase
+	 
+.c-next
+	right: 10%
+.c-prev
+	left: 10%
+
+.carousel-nav
+	position: relative
+	height: 25px
+
+// .carouselbox button 
+// 	border: none
+// 	visibility: hidden
+
+// .active button 
+// 	visibility: visible
+ 
+// .offscreen 
+// 	position: absolute
+// 	left: -2000px
+
+// .active .buttons 
+// 	padding: 5px 0
+// 	background: #eee
+// 	text-align: center
+// 	z-index: 10
+// 	position: relative
+
+	
+

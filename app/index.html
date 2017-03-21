@@ -14,7 +14,7 @@
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
         <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" />
-       <!--  <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css"> -->
+        <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -139,26 +139,63 @@
                     <p>Helping people buy homes isn’t just any job. That’s why we don’t hire just any people. We look for the best and give them our best in return.
                     </p>
                     <p>But don’t take our word for it. See what our employees have to say.</p>
-                    <br>
-                    <div class="video-block">
-
-                        <div class="video-frame video-frame-1">
-                            <span>Branch&nbsp;<br> Manager</span>
-                            <img src="./images/play-button.png" alt="" class="play-button">
-                            <img src="./images/LO-Nate-Raich.png" alt="" class="person-img" >
+                  
+                    <!-- carousel navigation -->
+                    <div class="carousel-nav">
+                        <div class="c-prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>Prev
                         </div>
-                        <div class="video-frame video-frame-2">
-                            <span>Branch&nbsp;<br>Manager</span>
-                            <img src="./images/play-button.png" alt="" class="play-button">
-                            <img src="./images/LO-Rusty-Mendoza.png" alt="" class="person-img" >
+                        <div class="c-next">
+                            Next<span class="glyphicon glyphicon-chevron-right"></span>
                         </div>
-                        <div class="video-frame video-frame-3">
-                            <span>Sales&nbsp;<br>Manager</span>
-                            <img src="./images/play-button.png" alt="" class="play-button">
-                            <img src="./images/LO-Yvette-Ortega.png" alt="" class="person-img" >
-                        </div>
-                       
                     </div>
+                    <!-- Carousel -->
+                    <div class="video-block carousel-box active"> 
+
+                        <ul class="content">
+                            <li  id="slide1">
+                                <div class="video-frame video-frame-1">
+                                    <span>Branch&nbsp;<br> Manager</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Nate-Raich.png" alt="" class="person-img" >
+                                </div>
+                                <div class="video-frame video-frame-2">
+                                    <span>Branch&nbsp;<br>Manager</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Rusty-Mendoza.png" alt="" class="person-img" >
+                                </div>
+                                <div class="video-frame video-frame-3">
+                                    <span>Sales&nbsp;<br>Manager</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Yvette-Ortega.png" alt="" class="person-img" >
+                                </div>
+                            </li> <!-- end .item -->
+
+                            <li  id="slide2">
+                                <div class="video-frame video-frame-1">
+                                    <span>test</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Nate-Raich.png" alt="" class="person-img" >
+                                </div>
+                                <div class="video-frame video-frame-2">
+                                    <span>test2</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Rusty-Mendoza.png" alt="" class="person-img" >
+                                </div>
+                                <div class="video-frame video-frame-3">
+                                    <span>test3</span>
+                                    <img src="./images/play-button.png" alt="" class="play-button">
+                                    <img src="./images/LO-Yvette-Ortega.png" alt="" class="person-img" >
+                                </div>
+                            </li> <!-- end .item -->
+
+                        </ul>
+
+                    </div>
+
+
+
+
                     <a href="http://www.pacificunionfinancial.com/Testimonials" class="button-blue button">View Customer Testimonials</a>
                 </div>  
                 <a href="#3" class="arrow down"></a>
@@ -608,7 +645,7 @@
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
-    <script src="/bower_components/fullpage.js/dist/jquery.fullpage.extensions.min.js"></script>
+
     <!-- endbower -->
     <!-- endbuild -->
     
@@ -616,9 +653,9 @@
     <!-- endbuild -->
     
     <!-- build:js scripts/main.js -->
-
     <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
+    <script src="scripts/carousel.js"></script>
     <!-- endbuild -->
 
     <!-- Google Tag Manager -->
