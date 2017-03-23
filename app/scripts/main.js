@@ -38,7 +38,7 @@ $(function() {
             //Navigation
             menu: false,
             lockAnchors: false,
-            anchors: ['Home', 'Testimonials', 'Growth', 'Culture', 'Contact-Us'],
+            anchors: ['Home', 'Testimonials', 'Leadership', 'Growth', 'Culture', 'Contact-Us'],
             navigation: false,
             navigationPosition: 'left',
             navigationTooltips: [],
@@ -107,7 +107,7 @@ $(function() {
                     $('video').get(8).pause();
                 }
 
-                if(index == 2 && nextIndex == 3  ){
+                if(index == 3 && nextIndex == 4  ){
                     $('.block-1').addClass('active'),
                     $('.map-wrapper').addClass('active');
                     $('video').get(1).pause();
@@ -120,7 +120,7 @@ $(function() {
                     $('video').get(8).pause();
                 }
 
-                if(index == 3 && nextIndex != 3  ){
+                if(index == 4 && nextIndex != 4  ){
                     $('.block-1').removeClass('active'),
                     $('.map-wrapper').removeClass('active');
                 }
@@ -155,7 +155,7 @@ $(function() {
                     $('video').get(7).pause();
                     $('video').get(8).pause();
                 }
-                if(index == 3){
+                if(index == 4){
                     $('.block-1').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
