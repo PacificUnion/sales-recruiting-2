@@ -159,6 +159,7 @@ $(function() {
                     $('.block-1').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
+                    $('.block-4').removeClass('active'),
                     $('.map-wrapper').addClass('active'),
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active');
@@ -189,26 +190,42 @@ $(function() {
                     $('.block-1').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
+                    $('.block-4').removeClass('active'),
                     $('.map-wrapper').addClass('active'),
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active');
+                    $('.volume-wrapper').removeClass('active');
                 });
                 $('.block-2').click(function(){
                     $('.block-2').addClass('active'),
                     $('.block-1').removeClass('active'),
                     $('.block-3').removeClass('active'),
+                    $('.block-4').removeClass('active'),
                     $('.map-wrapper').removeClass('active'),
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').addClass('active');
-
+                    $('.volume-wrapper').removeClass('active');
                 });
                 $('.block-3').click(function(){
                     $('.block-3').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-1').removeClass('active'),
+                    $('.block-4').removeClass('active'),
                     $('.map-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active'),
                     $('.achievements-wrapper').addClass('active');
+                    $('.volume-wrapper').removeClass('active');
+                });
+
+                $('.block-4').click(function(){
+                    $('.block-4').addClass('active'),
+                    $('.block-2').removeClass('active'),
+                    $('.block-1').removeClass('active'),
+                    $('.block-3').removeClass('active'),
+                    $('.map-wrapper').removeClass('active'),
+                    $('.graph-wrapper').removeClass('active'),
+                    $('.achievements-wrapper').removeClass('active'),
+                    $('.volume-wrapper').addClass('active');
                 });
 
                 $('.video-frame-1, #video-testimonial-1 ').click(function(){

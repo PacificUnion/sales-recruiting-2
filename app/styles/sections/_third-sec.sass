@@ -11,6 +11,7 @@
 		.block
 			height: 100%
 			width: 33.33%
+			width: 25%
 			top: 0
 			font-family: $h1-ff
 			font-size: $h2-fs-sm - 4px
@@ -78,7 +79,8 @@
 			left: 0
 			top: 0
 			.block
-				height: 33.33%
+				// height: 33.33%
+				height: 25%
 				width: 100%
 				top: 0
 				font-size: $h1-fs-lg
@@ -121,7 +123,10 @@
 				 	
 				&-3
 				 	background-color: $blue
-			
+				&-4
+					background-color: $green
+					&::before
+						border-color: transparent transparent transparent $green
 				&.active
 					&::before
 						opacity: 1

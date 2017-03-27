@@ -1,0 +1,181 @@
+.volume-wrapper
+	height: 80%
+	width: 100%
+	left: 0
+	position: absolute
+	top: 20%
+	opacity: 0 
+	transition: opacity 300ms ease-in 	 
+	// transform: scale(0.5)
+	// transition: all 500ms ease-in 400ms
+	.graph-lines
+		background-image: url(../images/graph/graph-lines-vol.png)
+		background-size: 80% 
+		background-position: center
+		background-repeat: no-repeat 
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding-bottom: 63.87%
+		.bar-container
+			position: absolute
+			top: 50% 
+			width: 80%
+			margin-left: 10%
+			margin-top: -31.93%
+			padding-bottom: 63.87%
+		.bar
+			background-color: $blue
+			position: absolute
+			bottom: 20.3% 
+			width: 6%
+			height: 0
+			&-1
+				left: 10.5%
+			&-2
+				left: 24%
+			&-3
+				left: 38%
+			&-4
+				left: 51.5% 
+			&-5
+				left: 65.5%
+			&-6
+				left: 79%
+			&-7
+				left: 92%
+			.green-man
+				width: 65%
+				height: auto
+				left: 17.5%
+				bottom: 100%
+				position: absolute
+				margin-bottom: 3px 
+	&.active
+		opacity: 1
+		.bar
+			@for $i from 1 through 7
+				&:nth-child(#{$i})
+					transition: height
+					transition-duration: (150ms * $i)
+					transition-timing-function: ease-in-out
+			&-1
+				height: 3%
+			&-2
+				height: 12.5%
+			&-3
+				height: 23.5%
+			&-4
+				height: 35.5%
+			&-5
+				height: 44.5%
+			&-6
+				height: 55.5%
+			&-7
+				height: 65%
+			
+	.arrow
+		position: absolute
+		top: 85%
+		z-index: 100
+		left: 50%
+		
+@media screen and (min-width: 768px)	
+	.volume-wrapper
+		position: absolute
+		height: 100%
+		width: 75%
+		top: 0
+		left: 25%
+		opacity: 0 
+		transition: opacity 300ms ease-in 	 
+		// transform: scale(0.5)
+		// transition: all 500ms ease-in 400ms
+		.graph-lines
+			background-size: 80% 
+			background-position: center
+			background-repeat: no-repeat 
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			padding-bottom: 63.87%
+			.bar-container
+				position: absolute
+				top: 50% 
+				width: 80%
+				margin-left: 10%
+				margin-top: -31.93%
+				padding-bottom: 63.87%
+			.bar
+				background-color: $blue
+				position: absolute
+				bottom: 20.3% 
+				width: 6%
+				height: 0
+				&-1
+					left: 10.5%
+				&-2
+					left: 24%
+				&-3
+					left: 38%
+				&-4
+					left: 51.5% 
+				&-5
+					left: 65.5%
+				&-6
+					left: 79%
+				&-7
+					left: 92%
+				.house-icon
+					width: 110%
+					height: auto
+					left: -5%
+					bottom: 100%
+					position: absolute
+					margin-bottom: 3px 
+		&.active
+			opacity: 1
+			.bar
+				@for $i from 1 through 7
+					&:nth-child(#{$i})
+						transition: height
+						transition-duration: (150ms * $i)
+						transition-timing-function: ease-in-out
+				&-1
+					height: 3%
+				&-2
+					height: 12.5%
+				&-3
+					height: 23.5%
+				&-4
+					height: 35.5%
+				&-5
+					height: 44.5%
+				&-6
+					height: 55.5%
+				&-7
+					height: 65%
+		.arrow
+			top: 87%	 
+
+					
+@media screen and (min-width: 1024px)
+	.volume-wrapper
+		top: 5%
+				
+@media screen and (min-width: 1440px)
+	.volume-wrapper
+		top: 10%
+
+@media screen and (max-height: 700px) and (min-width: 768px)
+	.volume-wrapper
+		.graph-lines
+			width: 85%
+			left: 7.5%
+			top: 5%
+			
+			
