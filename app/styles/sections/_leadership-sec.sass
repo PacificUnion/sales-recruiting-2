@@ -3,8 +3,6 @@
 	width: 100vw
 	padding: 0
 	overflow: hidden
-	// display: flex
-	// flex-flow: row wrap
 	.fp-tableCell
 		height: 100vh
 		padding: 0
@@ -19,7 +17,139 @@
 		background-position: center top
 		float: left
 		padding-top: 100vw
+		
+		&.active
+			.slide__text-wrapper-large
+				opacity: 1
+				visibility: visible
+				left: 0
+	.slide__text-wrapper-large
+		width: 100%
+		height: 100%
+		z-index: 9
+		background-color: $dark-gray
+		left: 100%
+		top: 0
+		display: flex
+		align-items: center
+		justify-content: center
+		visibility: hidden
+		opacity: 0
+		transition: opacity 0.2s , visibility 0.2s, width 0.3s , left 0.3s ease-in 
+		position: absolute
+		
+		.slide__more
+			left: 90%
+			top: 10%
+			z-index: 100
+			width: 25px
+			height: 25px
+			margin: 0
+			position: absolute
+			cursor: pointer
+			&::after, &::before
+				content: ''
+				top: 50%
+				left: 50%
+				width: 100%
+				height: 1px
+				background: $light-gray 
+				transform-origin: 50% 50%
+				position: absolute
+			&::after
+				transform: translate(-50%, -50%) rotate(45deg)
+			&::before
+				transform: translate(-50%, -50%) rotate(-45deg)
+				
+		.slide__text
+			padding: 5%
+			margin: -4% -6% 0
+			background: url(../images/quote-open-dark.png) no-repeat 1% 1.2rem
+			background-size: 16px
+			background-position: 10px 25px 
+			color: $white
+			font-family: 'Droid Serif', serif
+			font-size: 14px
+			font-style: italic
+			text-align: left
+			line-height: 28px
+			width: 100%
+			position: relative
+			top: 10%
+			text-shadow: -2.1px 2.1px 3px rgba(0, 0, 0, 0.3)
+			
+			&::after
+				display: inline-block
+				content: ''
+				background: url(../images/quote-close-dark.png) no-repeat center 0.3rem
+				background-size: 16px
+				height: 1.5rem
+				width: 3rem
+				vertical-align: top
+				margin-right: -3rem
+		.line
+			width: 93%
+			height: 1px
+			background-color: $light-gray
+			margin: 16px 0 
+		
+		.fullscreen__list
+		 	list-style: none
+		 	padding: 0
+		 	margin: 0
+		 	color: $white
+		 	font-family: 'Gotham Book'
+		 	font-size: 12px
+		 	line-height: 24px
+		 	text-align: left
+		 	margin-left: 14px
+		 	li 
+		 		&::before
+			 		content: '\2022'
+			 		color: $green 
+			 		margin-left: -14px
+			 		margin-right: 7px  
 
+		
+		.fullscreen__author-info
+			width: 60%
+			padding: 0 5%
+			display: flex
+			flex-flow: column wrap
+		
+			.slide__author
+				text-align: left
+				color: $white
+				font-family: 'Gotham Bold'
+				font-size: 20px
+				
+			.slide__role
+				color: $white
+				font-family: 'Droid Serif Italic'
+				font-size: 14px 
+				line-height: 28px				 
+				text-align: left
+		.double-arrow__wrapper
+			position: absolute
+			top: 50%
+			cursor: pointer
+			width: 4.5rem
+			height: 2.5rem
+			 
+		.slide__next-double-arrow_left
+			left: 3%
+			transform: rotate(90deg)	
+		.slide__next-double-arrow_right
+			right: 3%
+			transform: rotate(-90deg)
+		.arrow
+			bottom: 0
+			transform-origin: 0 0
+
+
+
+
+	//end slide__text-wrapper-large
 		
 	.slide__text-wrapper-small
 		background-color: $dark-gray 
@@ -99,27 +229,33 @@
 		
 
 	@media screen and (min-width: 768px)
+		
+		display: flex
+		flex-flow: row wrap
 		.slide__row
 			height: 33.333vh
-			position: relative
+			// position: relative
 			width: 100vw
 		.slide__col
 			width: 16.665%
 			float: left
 			height: 100%
-			display: block
+			height: 33.333vh
 			padding-top: 0
-			background-size: cover  
+			background-size: cover
+			
 		.slide__col_long
 			width: 33.333%
 			float: left
-			height: 100%
+			// height: 100%
 			display: block
 			background-color: $blue
+			
 			.slide__title
 				font-family: 'Gotham Bold'
 				font-size: 2rem 
 				padding-top: 15% 
+				
 			.slide__subtitle
 				font-size: 1.5rem
 				width: 80%
@@ -140,9 +276,11 @@
 					height: 20px
 					width: 20px
 					display: inline-block
+					
 				&::before 
 					background-image: url(../images/quote-open-white.png)
 					margin-right: 5px 
+					
 				&::after
 					background-image: url(../images/quote-close-white.png) 
 					margin-left: 5px
@@ -151,6 +289,7 @@
 				font-family: 'Gotham Bold'
 				font-size: 16px 
 				position: relative
+				
 			&:nth-child(1)
 				background-color: $dark-gray 
 			
@@ -198,10 +337,12 @@
 		.filler-down-arrow
 			background-color: $dark-gray
 			position: relative
+			
 			.slide__text-wrapper
 				position: relative
 				left: 50%
 				top: 50%
+				
 			.slide__next
 				top: 50%
 				border: 1px dashed #d1d1d1
@@ -213,6 +354,7 @@
 				left: 50%
 				margin-left: -22.5%
 				margin-top: -22.5%
+				
 		.quote-filler
 			display: block
 
@@ -220,8 +362,10 @@
 		.slide__col_long
 			.slide__title
 				padding-top: 7%
+				
 			.slide__subtitle
 				margin-top: 0
+				
 			.slide__citation 
 				margin-top: 7%
 
@@ -229,10 +373,13 @@
 			.slide__author
 				padding-top: 24%
 				font-size: 1.8rem
+				
 			.slide__more
 				margin-top: 5% 
+				
 			.line
 				margin: 1rem auto
+				
 			.slide__text
 				font-size: 1.3rem 
 				

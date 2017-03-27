@@ -282,11 +282,41 @@ $(function() {
                 $('.form-contact .close').click(function(){
                     $('.form-contact').removeClass('active');
                 });
+
+                $('.slide__col').click(function(){
+                    $(this).addClass('active');
+                });
+
+
+
+                $('.slide__text-wrapper-small').click(function(){
+                    $(this).closest('.slide__col').addClass('active');
+                });
+              
+
+
+                $('.slide__text-wrapper-large .slide__more').click(function(e){
+                    $(this).closest('.slide__col').removeClass('active');
+                    e.stopPropagation();
+                });
+
+                $('.slide__next-double-arrow_left').click(function(e){
+                    $(this).closest('.slide__col_quoted').removeClass('active');
+                    e.stopPropagation();
+                    $(this).closest('.slide__col_quoted').prevAll('.slide__col_quoted:first').addClass('active');
+                });
+
+                $('.slide__next-double-arrow_right').click(function(e){
+                    $(this).closest('.slide__col_quoted').removeClass('active');
+                    e.stopPropagation();
+                    $(this).closest('.slide__col_quoted').nextAll('.slide__col_quoted:first').addClass('active');
+                });
+
+
             }
       
         	// scrollOverflow: true,
         	// normalScrollElements: '.history-block'
         });
-    // } 
 });
 
