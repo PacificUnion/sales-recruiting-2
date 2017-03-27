@@ -283,11 +283,21 @@ $(function() {
                     $('.form-contact').removeClass('active');
                 });
 
+
+
+
                 $('.slide__col').click(function(){
+                    $('.slide__col').removeClass('active');
+
                     $(this).addClass('active');
+
+
+    
+                    if( $( window ).width() <= 768 ){
+                        console.log('mobile');
+
+                    }
                 });
-
-
 
                 $('.slide__text-wrapper-small').click(function(){
                     $(this).closest('.slide__col').addClass('active');
@@ -311,6 +321,12 @@ $(function() {
                     e.stopPropagation();
                     $(this).closest('.slide__col_quoted').nextAll('.slide__col_quoted:first').addClass('active');
                 });
+
+                if( $( window ).width() <= 768 ){
+                    console.log('mobile');
+                    
+
+                }
 
 
             }
