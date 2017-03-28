@@ -107,9 +107,7 @@ $(function() {
                     $('video').get(8).pause();
                 }
 
-                if(index == 3 && nextIndex == 4  ){
-                    $('.block-1').addClass('active'),
-                    $('.map-wrapper').addClass('active');
+                if(index == 4 && nextIndex == 5  ){
                     $('video').get(1).pause();
                     $('video').get(2).pause();
                     $('video').get(3).pause();
@@ -118,12 +116,20 @@ $(function() {
                     $('video').get(6).pause();
                     $('video').get(7).pause();
                     $('video').get(8).pause();
+                    $('.block-2').removeClass('active'),
+                    $('.block-3').removeClass('active'),
+                    $('.block-4').removeClass('active'),
+                    $('.achievements-wrapper').removeClass('active'),
+                    $('.graph-wrapper').removeClass('active'),
+                    $('.volume-wrapper').removeClass('active'),
+                    $('.block-1').addClass('active'),
+                    $('.map-wrapper').addClass('active');
                 }
 
-                if(index == 4 && nextIndex != 4  ){
-                    $('.block-1').removeClass('active'),
-                    $('.map-wrapper').removeClass('active');
-                }
+                // if(index == 4 && nextIndex != 4  ){
+                //     $('.block-1').removeClass('active'),
+                //     $('.map-wrapper').removeClass('active');
+                // }
 
                 if(index == 10 && nextIndex == 11 ){
                    
@@ -162,7 +168,8 @@ $(function() {
                     $('.block-4').removeClass('active'),
                     $('.map-wrapper').addClass('active'),
                     $('.achievements-wrapper').removeClass('active'),
-                    $('.graph-wrapper').removeClass('active');
+                    $('.graph-wrapper').removeClass('active'),
+                    $('.volume-wrapper').removeClass('active');
                 }
                 if(index == 1 || index == 3 || index == 4){
                     $('nav .nav-title a').css('text-shadow', 'none');
@@ -339,11 +346,11 @@ $(function() {
                     $(this).closest('.slide__col_quoted').nextAll('.slide__col_quoted:first').addClass('active');
                 });
 
-                if( $( window ).width() <= 768 ){
-                    console.log('mobile');
+                // if( $( window ).width() <= 768 ){
+                //     console.log('mobile');
                     
 
-                }
+                // }
 
 
             }
