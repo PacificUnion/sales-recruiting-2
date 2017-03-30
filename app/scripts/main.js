@@ -145,13 +145,15 @@ $(function() {
                
                 }
                 if(index == 1 ){
-                    $('video').get(0).play();
+                    $('video').get(0).play();                    
                 }else{
                     $('.logo-wrapper').css('display', 'none');   
                 }
                 if(index == 2){
+                    $('.local a[href="#Testimonials"]').addClass('active');
                     $('.logo-wrapper').css('display', 'none');
                 }else{
+                    $('.local a[href="#Testimonials"]').removeClass('active');
                     $('video').get(1).pause();
                     $('video').get(2).pause();
                     $('video').get(3).pause();
@@ -161,7 +163,13 @@ $(function() {
                     $('video').get(7).pause();
                     $('video').get(8).pause();
                 }
+                if(index == 3){
+                    $('.local a[href="#Leadership"]').addClass('active');
+                }else{
+                    $('.local a[href="#Leadership"]').removeClass('active');
+                }
                 if(index == 4){
+                    $('.local a[href="#Growth"]').addClass('active');
                     $('.block-1').addClass('active'),
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
@@ -170,6 +178,13 @@ $(function() {
                     $('.achievements-wrapper').removeClass('active'),
                     $('.graph-wrapper').removeClass('active'),
                     $('.volume-wrapper').removeClass('active');
+                }else{
+                    $('.local a[href="#Growth"]').removeClass('active');                    
+                }
+                if(index == 5){
+                    $('.local a[href="#Culture"]').addClass('active');
+                }else{
+                    $('.local a[href="#Culture"]').removeClass('active');
                 }
                 if(index == 1 || index == 3 || index == 4){
                     $('nav .nav-title a').css('text-shadow', 'none');
@@ -299,6 +314,12 @@ $(function() {
                     }
                 });
 
+                $('.close-video').click(function(){
+                    $('video').get(0).pause();
+                    $('video').get(1).pause();
+                    $('video').get(2).pause();
+                    $('.video-overlay').removeClass('active');
+                });
 
                 $('#contact-button, .nav-contact').click(function(){
                     $('.form-contact').addClass('active');
