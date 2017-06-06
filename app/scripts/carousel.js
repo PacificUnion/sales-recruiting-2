@@ -70,7 +70,7 @@
     }
 
     // Set interval 
-    var timer = setInterval(turn, 10000);
+    var timer = setInterval(turn, 1000000);
 
 }());
 

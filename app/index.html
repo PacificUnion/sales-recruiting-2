@@ -10,10 +10,68 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
         <!-- Place favicon.ico in the root directory -->
+        <style>
+            .spinner_hol{
+                position: fixed;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: #f1f1f1;
+                z-index: 5000;
+                font-size: 1rem;
+                opacity: 1;
+                visibility: visible;
+                transition: visibility 0.3s ease-in, opacity 0.3s ease-in;
+            }
+            .spinner{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-top: -20rem;
+                margin-left: -20rem;
+                width: 40rem;
+                height: 40rem;
+            }
+            .spinner svg {
+                width: 100%;
+                height: 100%;
+            }
+            .spinner svg .house-icon-line {
+                stroke: #39B54A;
+                fill: none;
+                stroke-width: 3;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-miterlimit: 10;
+            }
+            .spinner svg .house-icon-circle {
+                fill: none;
+                stroke: #1465A5;
+                stroke-width: 3;
+                stroke-miterlimit: 10;
+            }
+            .house-icon-line{
+                stroke-dashoffset: 2502;
+                stroke-dasharray: 2502;
+                animation: dash 3s linear alternate infinite;
+            }
+            .hide{
+                visibility: hidden;
+                opacity: 0;
+            }
+            @keyframes dash{
+                from {
+                    stroke-dashoffset: 2502; 
+                }
+                to {
+                    stroke-dashoffset: 0; 
+                }
+            }
+        </style>
 
         <!-- build:css styles/vendor.css -->
         <!-- bower:css -->
-        <link rel="stylesheet" href="/bower_components/fullpage.js/dist/jquery.fullpage.css" />
         <link rel="stylesheet" type="text/css" href="/bower_components/font-awesome/css/font-awesome.min.css">
         <!-- endbower -->
         <!-- endbuild -->
@@ -27,17 +85,16 @@
         
         <!-- endbuild -->
 
-        <!-- Google Analytics -->
-        <script>
-          (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-          function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-          e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-          e.src='https://www.google-analytics.com/analytics.js';
-          r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-          ga('create','UA-42026516-1');ga('send','pageview');
-        </script>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-K65R3M');</script>
+        <!-- End Google Tag Manager -->
+
     </head>
-    <body>
+    <body onload="spinner();">
     <!--[if IE]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -120,7 +177,9 @@
         </a> 
 
         <div id="fullpage">
+
             <div class="first-sec section" id="sec-1">
+               
                 <div class="video-wrapper">
                     <video muted preload="none" autoplay="true" loop poster="./images/our-people-loop.jpg">
                       <source src="./video/our-people-loop.webm" type="video/webm">
@@ -128,10 +187,11 @@
                     </video>
                     <h1>Our people are the reason we've grown year-over-year since 2004. And the reason we'll keep growing.</h1>                    
                 </div>
+
                 <a href="#2" class="arrow light-gray"></a>
             </div>
 
- 
+
             <div class="section second-sec" id="sec-2">
                 <div class="event">
                     <h2>Employee Testimonials</h2>
@@ -152,15 +212,27 @@
                             Next<span class="glyphicon glyphicon-chevron-right"></span>
                         </div>
                     </div>
+
+    <script src="https://fast.wistia.com/embed/medias/57d4w0rtju.jsonp" async></script><script src="https://fast.wistia.com/assets/external/E-v1.js" async></script><span class="wistia_embed wistia_async_57d4w0rtju popover=true popoverContent=link" style="display:inline"><a href="#">This is my popover!</a></span>
+
                     <!-- Carousel -->
                     <div class="video-block carousel-box active"> 
-
+                            
                         <ul class="content">
                             <li  id="slide1">
-                                <div class="video-frame video-frame-1">
+                                <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+                                <script src="https://fast.wistia.com/embed/medias/57d4w0rtju.jsonp" async></script>
+
+                                
+                               <!--  <span class="wistia_embed wistia_async_57d4w0rtju popover=true popoverContent=link" style="display:inline"><a href="#">This is my popover!</a></span> -->
+
+
+                                <div class="video-frame video-frame-1 wistia_embed wistia_async_57d4w0rtju popover=true popoverContent=link" >
+                                    <a href="#">        
                                     <span>Branch&nbsp;<br> Manager</span>
                                     <img src="./images/play-button.png" alt="" class="play-button">
                                     <img src="./images/LOs/LO-Nate-Raich.png" alt="" class="person-img" >
+                                    </a>
                                 </div>
                                 <div class="video-frame video-frame-2">
                                     <span>Branch&nbsp;<br>Manager</span>
@@ -194,9 +266,9 @@
 
                             <li  id="slide2">
                                 <div class="video-frame video-frame-7">
-                                    <span>Senior&nbsp;<br>Closer</span>
+                                    <span>Sales&nbsp;<br>Manager</span>
                                     <img src="./images/play-button.png" alt="" class="play-button">
-                                    <img src="./images/LOs/PUF-SR-Closer-Brad-Wiley.png" alt="" class="person-img" >
+                                    <img src="./images/LOs/LO-Yvette-Ortega.png" alt="" class="person-img" >
                                 </div>
                                 <div class="video-frame video-frame-8">
                                     <span>Underwriter</span>
@@ -225,10 +297,13 @@
                         <span></span>
                         <span></span>
                     </div>
-                    <video preload="none" autoplay controls>
+
+              
+
+                    <!-- <video preload="none" autoplay controls>
                         <source src="./video/Nate.webm" type="video/webm">
                         <source src="./video/Nate.mp4" type="video/mp4">
-                    </video>
+                    </video> -->
                 </div>
                 <div class="video-overlay" id="video-testimonial-2">
                     <div class="close-video">
@@ -281,7 +356,7 @@
                         <source src="./video/PUF-Sales-Coordinator-Dustin-Ross.mp4" type="video/mp4">
                     </video>
                 </div>
-                 <div class="video-overlay" id="video-testimonial-7">
+                <!--  <div class="video-overlay" id="video-testimonial-7">
                     <div class="close-video">
                         <span></span>
                         <span></span>
@@ -290,7 +365,7 @@
                         <source src="./video/PUF-SR-Closer-Brad-Wiley.webm" type="video/webm">
                         <source src="./video/PUF-SR-Closer-Brad-Wiley.mp4" type="video/mp4">
                     </video>
-                </div>
+                </div> -->
                 <div class="video-overlay" id="video-testimonial-8">
                     <div class="close-video">
                         <span></span>
@@ -308,538 +383,7 @@
 ######################################################################################################
 ######################################################################################################
 3 -->            
-            <div class="section leadership-sec" id="sec-lead">
-           
-                <!-- <div class="slide__row"> -->
-                    <div class="slide__col_long slide__col_dark slide__col first-square">
-                        <div class="slide__title slide__title_white">Leadership</div>
-                        <p class="slide__subtitle">
-                            Pacific Union’s leadership team can best be
-                            summarized with one word – proven. Not only are
-                            they industry professionals, they’re professionals
-                            with track records of success.
-                        </p>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Evan-Stone.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Evan Stone</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Founder</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <!-- <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div> -->
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Evan-Stone.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">Putting together a great company is like putting together a great team. It isn’t enough to find the best players – they need to fit together as a whole. That’s why at Pacific Union, we coach for long-term career success.</div>
-                                <div class="slide__author">Evan Stone</div>
-                                <div class="slide__role">Founder</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Grew Pacific Union to over $10 billion residential origination volume in eight years</li>
-                                      <li class="fullscreen__list-item">Former Co-CEO of 21st Century Financial</li>
-                                      <li class="fullscreen__list-item">Graduate of the Morgan Stanley Investment Manager’s Training Program</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Rick-Skogg.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Rick Skogg</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                President &amp; CEO
-                            </div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Rick-Skogg.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">
-                                    Being committed is not enough anymore. Our passion to create the best customer experience is what defines us. It makes
-                                    us smarter, faster, more innovative. It creates a culture of success.
-                                </div>
-                                <div class="slide__author">Rick Skogg</div>
-                                <div class="slide__role">President &amp; CEO</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">27 years of mortgage industry experience</li>
-                                        <li class="fullscreen__list-item">Former President, W.J. Bradley Mortgage Capital</li>
-                                        <li class="fullscreen__list-item">Built out leadership team, multiple origination  channels, mortgage servicing platform</li>
-                                        <li class="fullscreen__list-item">Executive Director, Institutional Lending Group, MetLife</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Madison-Simm.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Madison Simm</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Chief Financial Officer</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Madison-Simm.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">I believe that personal satisfaction springs from tireless dedication to the improvement and deployment of one's skills and abilities to achieve goals, investment in the growth of others, and the creation of deep and lasting relationships.</div>
-                              <div class="slide__author">Madison Simm</div>
-                                <div class="slide__role">Chief Financial Officer</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Degrees and certifications from Regis  University, Stanford, and Johns Hopkins</li>
-                                        <li class="fullscreen__list-item">13 years of mortgage industry experience</li>
-                                        <li class="fullscreen__list-item">Former VP, Finance, Lehman Brothers Holdings</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/karen-crawford.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Karen Crawford</div>
-                            <div class="line"></div>
-                            <div class="slide__text">SEVP, Chief Legal and Compliance Officer</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/karen-crawford.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__author">Karen Crawford</div>
-                                <div class="slide__role">SEVP, Chief Legal and Compliance Officer</div>
-                              
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Over 30 years of mortgage industry experience</li>
-                                        <li class="fullscreen__list-item">Former General Counsel with Caliber Home Loans, Chief Legal Officer of Stearns Lending</li>
-                                        <li class="fullscreen__list-item">JD from Baylor University School of Law</li>
-
-
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                <!-- </div>  end of row -->
-                <!-- <div class="slide__row"> -->
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Dwayne-Smith.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Dwayne Smith</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Chief Administrative Officer
-                            </div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Dwayne-Smith.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">The mortgage business isn’t really about money. It’s about trust. We have to be worthy of the trust borrowers and clients place in us. We do that by being ethical, by being available, and by embracing cutting edge technology to give them the best possible experience.</div>
-                                <div class="slide__author">Dwayne Smith</div>
-                                <div class="slide__role">Chief Administrative Officer</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">VP &amp; Chief Human Resources Officer, Long &amp; Foster</li>
-                                      <li class="fullscreen__list-item">Executive Director and SVP of Human Resources, Saxon</li>
-                                      <li class="fullscreen__list-item">Director &amp; VP of Human Resources, Archon Group</li>
-
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Barbara-Sydow.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Barbara Sydow</div>
-                            <div class="line"></div>
-                            <div class="slide__text">SEVP, Credit Risk &amp; Operational Support</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Barbara-Sydow.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">A great customer experience is often defined by what the customer doesn’t see. Flawless execution by passionate people behind the scenes defines our success. We remove the friction to make mortgage easy.</div>
-                                <div class="slide__author">Barbara Sydow</div>
-                                <div class="slide__role">SEVP, Credit Risk &amp; Operational Support</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">20 years of executive and strategic level mortgage industry experience</li>
-                                      <li class="fullscreen__list-item">Built out technology implementations, efficiency improvements, operational teams</li>
-                                      <li class="fullscreen__list-item">Former VP Institutional Lending Group, Metlife</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Brandon-Story.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Brandon Story</div>
-                            <div class="line"></div>
-                            <div class="slide__text">SEVP, Business&nbsp;Intelligience, Capital Markets &amp; Product Development</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image"> <img src="./images/leadership/Brandon-Story.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">Managing risk is a not a function of understanding what we know, but having the ability to understand the impacts of what we don’t.</div>
-                                <div class="slide__author">Brandon Story</div>
-                                <div class="slide__role">SEVP, Business&nbsp;Intelligience, Capital Markets &amp; Product Development</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">20 years mortgage industry experience</li>
-                                      <li class="fullscreen__list-item">First Vice President, Countrywide Home Loans</li>
-                                      <li class="fullscreen__list-item">Vice President, Production Revenue Strategy, MetLife Home Loans</li>
-
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_long quote-filler">
-                        <div class="slide__citation">
-                            Being committed is not enough anymore. Our
-                            passion to create the best customer experience is
-                            what defines us. It makes us smarter, faster, more
-                            innovative. It creates a culture of success.
-                        </div>
-                        <div class="slide__author">RICK SKOGG</div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Andy-Peach.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Andy Peach</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                SEVP, Institutional Lending Group</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Andy-Peach.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">It's easy to be good. Focus everyday on being the best... then execute flawlessly.</div>
-                                <div class="slide__author">Andy Peach</div>
-                                <div class="slide__role">SEVP, Institutional Lending Group</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Over 20 years of mortgage industry experience</li>
-                                      <li class="fullscreen__list-item">Former Division Manager, Correspondent Lending, JPMorgan Chase &amp; Co.</li>
-                                      <li class="fullscreen__list-item">Managed teams that purchased over $18 Billion in annual mortgage volume</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                <!-- </div>  end of row -->
-
-                <!-- <div class="slide__row "> -->
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/John-Hummel.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">John Hummel</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                SEVP, Retail Lending</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/John-Hummel.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">An unwavering focus on delivering extraordinary customer service allows Pacific Union to keep striving for our goal – to make home ownership one of life’s most rewarding experiences for our employees, business partners and customers.</div>
-                                <div class="slide__author">John Hummel</div>
-                                <div class="slide__role">SEVP, Retail Lending</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">25 years of mortgage industry experience</li>
-                                        <li class="fullscreen__list-item">Former Sr. VP, Retail Lending, CMG Financial</li>
-                                        <li class="fullscreen__list-item">Former Senior VP, Wholesale, Correspondent &amp; Retail Lending Channels at Citibank</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                  
-                     <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/ritchie-mann.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Ritchie Mann</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                EVP Mortgage Servicing</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                         </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/ritchie-mann.jpg">
-                           </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">Delight customers at every engagement and become the new industry standard for servicing.</div>
-                                <div class="slide__author">Ritchie Mann</div>
-                                <div class="slide__role">EVP Mortgage Servicing</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">More than 25 years in mortgage banking servicing and operations</li>
-                                        <li class="fullscreen__list-item">Former EVP of Special Servicing/Default with Homewood Residential, Inc.</li>
-                                        <li class="fullscreen__list-item">Leadership encompasses special servicing, sub-servicing, investor relations, default and structured finance</li>
-
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Colin-Drummond.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Colin Drummond</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Chief Information Officer</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Colin-Drummond.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">The level of service provided, coupled with delivery against commitments made, are the mantras by which we are judged by others.</div>
-                                <div class="slide__author">Colin Drummond</div>
-                                <div class="slide__role">Chief Information Officer</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Broad professional experience including financial services, telecommunications and consulting</li>
-                                        <li class="fullscreen__list-item">Former Partner, Digital Practice Lead, Axiom Global Technologies</li>
-                                        <li class="fullscreen__list-item">Certified Chartered Information Technology Professional (CITP)</li>
-
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Jim-McDonald.jpg)">
-                        <div class="slide__text-wrapper-small">
-                            <div class="slide__author">Jim McDonald</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Chief Marketing Officer</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div>
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Jim-McDonald.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">Change the status quo – delight the customer at every turn and create an experience that is the envy of every industry. This becomes our brand.</div>
-                                <div class="slide__author">Jim McDonald</div>
-                                <div class="slide__role">Chief Marketing Officer</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">20+ years digital and brand marketing</li>
-                                        <li class="fullscreen__list-item">Multi-industry experience including dating, telecommunications, travel, and mortgage</li>
-                                        <li class="fullscreen__list-item">Creative-Techie improving the client experience through technology &amp;mobile apps</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide__col slide__col_quoted slide__col_fullscreen-quoted"
-                         style="background-image: url(./images/leadership/Mitzi-Migault.jpg)">
-                        <div class="slide__text-wrapper-small">
-
-                            <div class="slide__author">Mitzi Migault</div>
-                            <div class="line"></div>
-                            <div class="slide__text">
-                                Executive Vice President and Chief Risk Officer</div>
-                            <div class="slide__more">Read more</div>
-                        </div>
-
-                        <div class="slide__text-wrapper-large">
-                            <div class="slide__more"></div>
-                            <div class="double-arrow__wrapper slide__next-double-arrow_left js-fullscreen__arrow" data-orient="left">
-                                <div class="arrow"></div>
-                            </div>
-                            <!-- <div class="double-arrow__wrapper slide__next-double-arrow_right js-fullscreen__arrow" data-orient="right">
-                                <div class="arrow"></div>
-                            </div> -->
-                            <div class="fullscreen__author-image">
-                                <img src="./images/leadership/Mitzi-Migault.jpg">
-                            </div>
-                            <div class="fullscreen__author-info">
-                                <div class="slide__text">Success doesn’t just come to you. You have to go after success until it’s yours.</div>
-                                <div class="slide__author">Mitzi Migault</div>
-                                <div class="slide__role">Executive Vice President and Chief Risk Officer</div>
-                                <div class="line"></div>
-                                <div class="slide__signature">
-                                    <ul class="fullscreen__list fullscreen__list_green">
-                                        <li class="fullscreen__list-item">Over 20 years of senior level management experience in mortgage industry</li>
-                                        <li class="fullscreen__list-item">Former Senior Vice President of Operational Risk at Stearns Lending</li>
-                                    </ul>
-                                </div>
-                               
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="slide__col filler-down-arrow">
-                         <div class="slide__text-wrapper">
-                            <div class="slide__next">
-                               <a href="#4" class="arrow"></a> 
-
-                            </div>
-                        </div>
-                    </div>
-
-                   <!--  <div class="slide__col filler">
-                           <img src="/assets/images/logo-white-small.png" alt="">
-                    </div> -->
-                <!-- </div> -->
-
-            </div> <!-- end leadership-sec -->
+          
 <!-- #######################################################################################################################################################################################################
 ############################################################################################################################################################################################################3 --> 
             <div class="section third-sec" id="sec-3">
@@ -983,59 +527,59 @@
        
    
 
-    <div class="fifth-sec section" id="sec-5">
-        <div class="container">
-        
-            <!-- <div class="button" id="contact-button">Learn More</div> -->
-            <a href="../loan-officer-support" class="button">Learn how we support you</a>
+        <div class="fifth-sec section" id="sec-5">
+            <div class="container">
+            
+                <!-- <div class="button" id="contact-button">Learn More</div> -->
+                <a href="../loan-officer-support" class="button">Learn how we support you</a>
 
-            <div class="badges">
-                <a href="https://entp.hud.gov/sfnw/public/" target="_blank">
-                    <img src="./images/SVGs/badges/top-5-fha.svg" alt="" class="badge">
-                </a>
-                <a href="http://www.insidemortgagefinance.com/" target="_blank">
-                    <img src="./images/SVGs/badges/9th-largest-originator.svg" alt="" class="badge">
-                </a>
-                <a href="http://www.insidemortgagefinance.com/" target="_blank">
-                    <img src="./images/SVGs/badges/Mortgage-Lender.svg" alt="" class="badge">
-                </a>
-                <a href="https://www.glassdoor.com/Reviews/Pacific-Union-Financial-Reviews-E788214.htm" target="_blank">
-                    <img src="./images/SVGs/badges/Glassdoor-Rating.svg" alt="" class="badge">
-                </a>
-                <a href="https://www.zillow.com/lender-profile/Pacific%20Union/" target="_blank">
-                    <img src="./images/SVGs/badges/zillow-rating.svg" alt="" class="badge">
-                </a>
-                <a href="https://www.google.com/search?q=Pacific%20Union%20Financial%2C%20LLC%20NMLS%20%232221%208900%20Freeport%20Parkway%20%23150%20Irving&ludocid=14131749205967952128&hl=en#hl=en&q=Pacific+Union+Financial%2C+LLC+NMLS+%232221+8900+Freeport+Parkway+%23150+Irving&lrd=0x864c2bd53e112c2b:0xc41e0f0794a0d900,1" target="_blank">
-                    <img src="./images/SVGs/badges/google-rating-4.4.svg" alt="" class="badge">
-                </a>
-                <span>&ast;</span>
-            </div>
-
-            <p class="fine-print">&ast; Ratings as of Dec. 31, 2016</p>
-
-        </div> <!-- end .container -->
-
-       <footer>
-            <div class="row social">
-                <div class="col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
-                    <!-- <div class="row help-links">
-                        <a href="../loan-officer-jobs" class="help-link">Overview</a>
-                        <a href="../loan-officer-support" class="help-link">Support</a>
-                    </div> -->
-                    <div class="row social-links">
-                        <div class="social-label">Stay Connected</div>
-                        <ul class="social-icons">
-                            <li><a href="https://www.facebook.com/Pacific-Union-Financial-LLC-NMLS-2221-367767359995225"><i class="fa fa-facebook-square"></i></a></li>
-                            <li><a href="https://www.linkedin.com/company/pacific-union-financial"><i class="fa fa-linkedin-square"></i></a></li>
-                            <li><a href="http://www.yelp.com/biz/pacific-union-financial-llc-irving"><i class="fa fa-yelp"></i></a></li>
-                            <li><a href="https://www.pinterest.com/PacUnionLoan/"><i class="fa fa-pinterest"></i></a></li>
-                            <li><a href="https://plus.google.com/+PacificUnionFinancialLLCIrving/about"><i class="fa fa-google-plus"></i></a></li>
-                            <li><a href="https://www.instagram.com/pacificunionfinancial/"><i class="fa fa-instagram"></i></a></li>
-                        </ul>
-                    </div>
+                <div class="badges">
+                    <a href="https://entp.hud.gov/sfnw/public/" target="_blank">
+                        <img src="./images/SVGs/badges/top-5-fha.svg" alt="" class="badge">
+                    </a>
+                    <a href="http://www.insidemortgagefinance.com/" target="_blank">
+                        <img src="./images/SVGs/badges/9th-largest-originator.svg" alt="" class="badge">
+                    </a>
+                    <a href="http://www.insidemortgagefinance.com/" target="_blank">
+                        <img src="./images/SVGs/badges/Mortgage-Lender.svg" alt="" class="badge">
+                    </a>
+                    <a href="https://www.glassdoor.com/Reviews/Pacific-Union-Financial-Reviews-E788214.htm" target="_blank">
+                        <img src="./images/SVGs/badges/Glassdoor-Rating.svg" alt="" class="badge">
+                    </a>
+                    <a href="https://www.zillow.com/lender-profile/Pacific%20Union/" target="_blank">
+                        <img src="./images/SVGs/badges/zillow-rating.svg" alt="" class="badge">
+                    </a>
+                    <a href="https://www.google.com/search?q=Pacific%20Union%20Financial%2C%20LLC%20NMLS%20%232221%208900%20Freeport%20Parkway%20%23150%20Irving&ludocid=14131749205967952128&hl=en#hl=en&q=Pacific+Union+Financial%2C+LLC+NMLS+%232221+8900+Freeport+Parkway+%23150+Irving&lrd=0x864c2bd53e112c2b:0xc41e0f0794a0d900,1" target="_blank">
+                        <img src="./images/SVGs/badges/google-rating-4.4.svg" alt="" class="badge">
+                    </a>
+                    <span>&ast;</span>
                 </div>
-                <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-0 mortgage-notes">
-                    <div class="footer-row__social-right">
+
+                <p class="fine-print">&ast; Ratings as of Dec. 31, 2016</p>
+
+            </div> <!-- end .container -->
+
+            <footer>
+                <div class="row social">
+                    <div class="col-md-6 col-md-offset-2 col-sm-7 col-sm-offset-1">
+                        <!-- <div class="row help-links">
+                            <a href="../loan-officer-jobs" class="help-link">Overview</a>
+                            <a href="../loan-officer-support" class="help-link">Support</a>
+                        </div> -->
+                        <div class="row social-links">
+                            <div class="social-label">Stay Connected</div>
+                            <ul class="social-icons">
+                                <li><a href="https://www.facebook.com/Pacific-Union-Financial-LLC-NMLS-2221-367767359995225"><i class="fa fa-facebook-square"></i></a></li>
+                                <li><a href="https://www.linkedin.com/company/pacific-union-financial"><i class="fa fa-linkedin-square"></i></a></li>
+                                <li><a href="http://www.yelp.com/biz/pacific-union-financial-llc-irving"><i class="fa fa-yelp"></i></a></li>
+                                <li><a href="https://www.pinterest.com/PacUnionLoan/"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="https://plus.google.com/+PacificUnionFinancialLLCIrving/about"><i class="fa fa-google-plus"></i></a></li>
+                                <li><a href="https://www.instagram.com/pacificunionfinancial/"><i class="fa fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1 col-sm-3 col-sm-offset-1 col-md-2 col-md-offset-0 mortgage-notes">
+                        <div class="footer-row__social-right">
                         <svg xmlns="http://www.w3.org/2000/svg" class="svg-defs" viewBox="0 0 75 63.7" style="display: none">
                         <defs>
                         <g id="mortgage-notes-icon">
@@ -1074,53 +618,84 @@
                         </svg>
 
 
-                        <div class="slide__image">
-                        <svg class="footer__mortgage-notes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 63.7">
-                            <use xlink:href="#mortgage-notes-icon" fill="white" stroke="white"></use>
-                        </svg>
-                        </div>
-                        <div class="slide__image slide__image_circled">
-                        <svg class="footer__mortgage-notes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 63.7">
-                            <defs>
-                                <clipPath id="mortgage-notes-over">
-                                    <circle cx="37.5" cy="32" r="0" data-parent=".slide__image" data-r="60"></circle>
-                                </clipPath>
-                            </defs>
-                            <g clip-path="url(#mortgage-notes-over)">
-                                <use xlink:href="#mortgage-notes-icon" fill="#51ad3e" stroke="#51ad3e"></use>
-                            </g>
-                        </svg>
-                        </div>
-                        <a href="http://blog.pacificunionfinancial.com/" target="_blank" class="slide__button">Read our blog</a>
-                    </div>
-                </div>
-            </div>
-            <div class="row legal">
-                <div class="row">
-                    <div class="footer-row footer-fourth-row col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1 col-md-10 col-md-offset-2">
-                        <a class="footer-top-column__item footer__info-link" href="/#/Licensing">Licensing</a>
-                        <a class="footer-top-column__item footer__info-link" href="/#/Privacy">Privacy</a>
-                        <a class="footer-top-column__item footer__info-link" href="/#/Security">Security</a>
-                        <a class="footer-top-column__item footer__info-link" href="/#/Servicing-Fees">Servicing Fees</a>
-                    </div>
-                </div>
-                <div class="row">
-                        <div class="footer__license-left col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1 col-xs-6 col-xs-offset-3 col-lg-2">
-                            <div class="license-images">
-                                <img class="license-hud" src="./images/SVGs/hud.svg">
-                                <img class="license-bbb" src="./images/bbb.png">
+                            <div class="slide__image">
+                            <svg class="footer__mortgage-notes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 63.7">
+                                <use xlink:href="#mortgage-notes-icon" fill="white" stroke="white"></use>
+                            </svg>
                             </div>
+                            <div class="slide__image slide__image_circled">
+                            <svg class="footer__mortgage-notes" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 63.7">
+                                <defs>
+                                    <clipPath id="mortgage-notes-over">
+                                        <circle cx="37.5" cy="32" r="0" data-parent=".slide__image" data-r="60"></circle>
+                                    </clipPath>
+                                </defs>
+                                <g clip-path="url(#mortgage-notes-over)">
+                                    <use xlink:href="#mortgage-notes-icon" fill="#51ad3e" stroke="#51ad3e"></use>
+                                </g>
+                            </svg>
+                            </div>
+                            <a href="http://blog.pacificunionfinancial.com/" target="_blank" class="slide__button">Read our blog</a>
                         </div>
-                        <div class="col-md-5 col-sm-7 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-md-offset-0 col-lg-6">
-                            <p class="license-copy">&#169; 2017, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
-                              NMLS Consumer Access site <a href="http://www.nmlsconsumeraccess.org">http://www.nmlsconsumeraccess.org</a>.&nbsp; &nbsp;<br>Licensed Mortgage Banker-NYS Department of Financial Services.
-                            </p>
-                        </div>
+                    </div>
                 </div>
-            </div>
-        </footer>
+                <div class="row legal">
+                    <div class="row">
+                        <div class="footer-row footer-fourth-row col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-1 col-md-10 col-md-offset-2">
+                            <a class="footer-top-column__item footer__info-link" href="/#/Licensing">Licensing</a>
+                            <a class="footer-top-column__item footer__info-link" href="/#/Privacy">Privacy</a>
+                            <a class="footer-top-column__item footer__info-link" href="/#/Security">Security</a>
+                            <a class="footer-top-column__item footer__info-link" href="/#/Servicing-Fees">Servicing Fees</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                            <div class="footer__license-left col-md-3 col-md-offset-2 col-sm-3 col-sm-offset-1 col-xs-6 col-xs-offset-3 col-lg-2">
+                                <div class="license-images">
+                                    <img class="license-hud" src="./images/SVGs/hud.svg">
+                                    <img class="license-bbb" src="./images/bbb.png">
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-7 col-sm-offset-0 col-xs-10 col-xs-offset-1 col-md-offset-0 col-lg-6">
+                                <p class="license-copy">&#169; 2017, Pacific Union Financial LLC. All Rights Reserved. NMLS #2221.
+                                  NMLS Consumer Access site <a href="http://www.nmlsconsumeraccess.org">http://www.nmlsconsumeraccess.org</a>.&nbsp; &nbsp;<br>Licensed Mortgage Banker-NYS Department of Financial Services.
+                                </p>
+                            </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
 
-    </div>
+    </div> <!-- End #fullpage -->
+
+
+    <!-- Spinner -->
+    <script>
+        var spinTimer;
+
+        function spinner(){
+            var spinTimer = setTimeout(fadeOut(el), 3000); 
+        } 
+
+        var el = document.querySelector('.spinner_hol');
+
+        // fade out
+        function fadeOut(el){
+            el.style.opacity = 1;
+
+            (function fade() {
+                if ((el.style.opacity -= .1) < 0) {
+                    // el.style.display = "none";
+                    el.className += " hide";
+                } else {
+                    requestAnimationFrame(fade);
+                    // el.style.display = "none";
+                       el.className += " hide";
+
+                }
+            })();
+        }
+    </script>
+
     <!-- contact form -->
     <div class="form-contact">
         <div class="close">
@@ -1208,11 +783,11 @@
     </div>
   
     </div> <!--  end fullpage  -->
-
+   
     <!-- Deffered styles -->
     <noscript id="deferred-styles">
-      <link rel="stylesheet" type="text/css" href="styles/deffered.css"/>
-      <link rel="stylesheet" type="text/css" href="styles/vendor.css"/>
+      <link rel="stylesheet" type="text/css" href="styles/deffered.css?v=3.0.6"/>
+      <link rel="stylesheet" type="text/css" href="styles/vendor.css?v=3.0.6"/>
     </noscript>
     <script>
       var loadDeferredStyles = function() {
@@ -1229,6 +804,15 @@
     </script>
 
 
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+    
+   
 
     <script>
          function submitForm() {
@@ -1265,33 +849,16 @@
                     }
                 }
     </script>
-    
-   
-    <!-- build:js scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
-    <script src="/bower_components/gsap/src/minified/TweenMax.min.js"></script>
-    <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
-
-    <!-- endbower -->
-    <!-- endbuild -->
-    
     <!-- build:js scripts/plugins.js -->
     <!-- endbuild -->
+     <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
     
+    <!-- // <script src="scripts/wistia-fullpage-vid.js"></script> -->
+
     <!-- build:js scripts/main.js -->
-    <script src="scripts/DrawSVGPlugin.min.js"></script>
     <script src="scripts/main.js"></script>
     <script src="scripts/carousel.js"></script>
     <!-- endbuild -->
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-K65R3M');</script>
-    <!-- End Google Tag Manager -->
 
     </body>
 </html>

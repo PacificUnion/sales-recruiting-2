@@ -1,22 +1,3 @@
-// preloader spinner
-$(window).on('load', function(){
-    $('.spinner_hol').fadeIn('fast');
-    $('.spinner svg').css('visibility', 'visible');
-
-    function animate() {
-        TweenMax.set('.house-icon-line', {drawSVG: 0});
-        TweenMax.to('.house-icon-line', 3, {drawSVG: true});
-        TweenMax.to('.house-icon-line', 3, {drawSVG: '100% 100%', delay: 3});
-    }
-
-    animate();
-    setTimeout(function(){
-        $('.spinner_hol').fadeOut('slow', function(){
-            $('.spinner svg').css('visibility', 'hidden');
-        });
-    }, 2000);
-});
-
 
 $(function() {
     // ios8 test
@@ -97,25 +78,25 @@ $(function() {
                     $('video').get(0).play();
                     $('#fp-nav').css('display', 'none'); 
                     $('.logo-wrapper').css('display', 'block');
-                    $('video').get(1).pause();
-                    $('video').get(2).pause();
-                    $('video').get(3).pause();
-                    $('video').get(4).pause();
-                    $('video').get(5).pause();
-                    $('video').get(6).pause();
-                    $('video').get(7).pause();
-                    $('video').get(8).pause();
+                    // $('video').get(1).pause();
+                    // $('video').get(2).pause();
+                    // $('video').get(3).pause();
+                    // $('video').get(4).pause();
+                    // $('video').get(5).pause();
+                    // $('video').get(6).pause();
+                    // $('video').get(7).pause();
+                    // $('video').get(8).pause();
                 }
 
                 if(index == 4 && nextIndex == 5  ){
-                    $('video').get(1).pause();
-                    $('video').get(2).pause();
-                    $('video').get(3).pause();
-                    $('video').get(4).pause();
-                    $('video').get(5).pause();
-                    $('video').get(6).pause();
-                    $('video').get(7).pause();
-                    $('video').get(8).pause();
+                    // $('video').get(1).pause();
+                    // $('video').get(2).pause();
+                    // $('video').get(3).pause();
+                    // $('video').get(4).pause();
+                    // $('video').get(5).pause();
+                    // $('video').get(6).pause();
+                    // $('video').get(7).pause();
+                    // $('video').get(8).pause();
                     $('.block-2').removeClass('active'),
                     $('.block-3').removeClass('active'),
                     $('.block-4').removeClass('active'),
@@ -154,14 +135,14 @@ $(function() {
                     $('.logo-wrapper').css('display', 'none');
                 }else{
                     $('.local a[href="#Testimonials"]').removeClass('active');
-                    $('video').get(1).pause();
-                    $('video').get(2).pause();
-                    $('video').get(3).pause();
-                    $('video').get(4).pause();
-                    $('video').get(5).pause();
-                    $('video').get(6).pause();
-                    $('video').get(7).pause();
-                    $('video').get(8).pause();
+                    // $('video').get(1).pause();
+                    // $('video').get(2).pause();
+                    // $('video').get(3).pause();
+                    // $('video').get(4).pause();
+                    // $('video').get(5).pause();
+                    // $('video').get(6).pause();
+                    // $('video').get(7).pause();
+                    // $('video').get(8).pause();
                 }
                 if(index == 3){
                     $('.local a[href="#Leadership"]').addClass('active');
@@ -191,6 +172,8 @@ $(function() {
                 }else{
                     $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
                 }
+
+              
                    
             },
            
@@ -250,69 +233,69 @@ $(function() {
                     $('.volume-wrapper').addClass('active');
                 });
 
-                $('.video-frame-1, #video-testimonial-1 ').click(function(){
-                    $('#video-testimonial-1').toggleClass('active');
-                    $('video').get(1).play();
-                    if(!$('#video-testimonial-1').hasClass('active')){
-                        $('video').get(1).pause();
-                    }
-                });
-                $('.video-frame-2, #video-testimonial-2 ').click(function(){
-                    $('#video-testimonial-2').toggleClass('active');
-                    $('video').get(2).play();
-                    if(!$('#video-testimonial-2').hasClass('active')){
-                        $('video').get(2).pause();
-                    }
-                });
-                $('.video-frame-3, #video-testimonial-3 ').click(function(){
-                    $('#video-testimonial-3').toggleClass('active');
-                    $('video').get(3).play();
-                    if(!$('#video-testimonial-3').hasClass('active')){
-                        $('video').get(3).pause();
-                    }
-                });
-                 $('.video-frame-4, #video-testimonial-4 ').click(function(){
-                    $('#video-testimonial-4').toggleClass('active');
-                    $('video').get(4).play();
-                    if(!$('#video-testimonial-4').hasClass('active')){
-                        $('video').get(4).pause();
-                    }
-                });
-                $('.video-frame-5, #video-testimonial-5 ').click(function(){
-                    $('#video-testimonial-5').toggleClass('active');
-                    $('video').get(5).play();
-                    if(!$('#video-testimonial-5').hasClass('active')){
-                        $('video').get(5).pause();
-                    }
-                });
-                $('.video-frame-6, #video-testimonial-6 ').click(function(){
-                    $('#video-testimonial-6').toggleClass('active');
-                    $('video').get(6).play();
-                    if(!$('#video-testimonial-6').hasClass('active')){
-                        $('video').get(6).pause();
-                    }
-                });
-                 $('.video-frame-7, #video-testimonial-7 ').click(function(){
-                    $('#video-testimonial-7').toggleClass('active');
-                    $('video').get(7).play();
-                    if(!$('#video-testimonial-7').hasClass('active')){
-                        $('video').get(7).pause();
-                    }
-                });
-                $('.video-frame-8, #video-testimonial-8 ').click(function(){
-                    $('#video-testimonial-8').toggleClass('active');
-                    $('video').get(8).play();
-                    if(!$('#video-testimonial-8').hasClass('active')){
-                        $('video').get(8).pause();
-                    }
-                });
-                $('.video-frame-9').click(function(){
-                    $('#video-testimonial-2').toggleClass('active');
-                    $('video').get(2).play();
-                    if(!$('#video-testimonial-2').hasClass('active')){
-                        $('video').get(2).pause();
-                    }
-                });
+                // $('.video-frame-1, #video-testimonial-1 ').click(function(){
+                //     $('#video-testimonial-1').toggleClass('active');
+                //     $('video').get(1).play();
+                //     if(!$('#video-testimonial-1').hasClass('active')){
+                //         $('video').get(1).pause();
+                //     }
+                // });
+                // $('.video-frame-2, #video-testimonial-2 ').click(function(){
+                //     $('#video-testimonial-2').toggleClass('active');
+                //     $('video').get(2).play();
+                //     if(!$('#video-testimonial-2').hasClass('active')){
+                //         $('video').get(2).pause();
+                //     }
+                // });
+                // $('.video-frame-3, #video-testimonial-3 ').click(function(){
+                //     $('#video-testimonial-3').toggleClass('active');
+                //     $('video').get(3).play();
+                //     if(!$('#video-testimonial-3').hasClass('active')){
+                //         $('video').get(3).pause();
+                //     }
+                // });
+                //  $('.video-frame-4, #video-testimonial-4 ').click(function(){
+                //     $('#video-testimonial-4').toggleClass('active');
+                //     $('video').get(4).play();
+                //     if(!$('#video-testimonial-4').hasClass('active')){
+                //         $('video').get(4).pause();
+                //     }
+                // });
+                // $('.video-frame-5, #video-testimonial-5 ').click(function(){
+                //     $('#video-testimonial-5').toggleClass('active');
+                //     $('video').get(5).play();
+                //     if(!$('#video-testimonial-5').hasClass('active')){
+                //         $('video').get(5).pause();
+                //     }
+                // });
+                // $('.video-frame-6, #video-testimonial-6 ').click(function(){
+                //     $('#video-testimonial-6').toggleClass('active');
+                //     $('video').get(6).play();
+                //     if(!$('#video-testimonial-6').hasClass('active')){
+                //         $('video').get(6).pause();
+                //     }
+                // });
+                //  $('.video-frame-7, #video-testimonial-7 ').click(function(){
+                //     $('#video-testimonial-7').toggleClass('active');
+                //     $('video').get(7).play();
+                //     if(!$('#video-testimonial-7').hasClass('active')){
+                //         $('video').get(7).pause();
+                //     }
+                // });
+                // $('.video-frame-8, #video-testimonial-8 ').click(function(){
+                //     $('#video-testimonial-8').toggleClass('active');
+                //     $('video').get(8).play();
+                //     if(!$('#video-testimonial-8').hasClass('active')){
+                //         $('video').get(8).pause();
+                //     }
+                // });
+                // $('.video-frame-9').click(function(){
+                //     $('#video-testimonial-2').toggleClass('active');
+                //     $('video').get(2).play();
+                //     if(!$('#video-testimonial-2').hasClass('active')){
+                //         $('video').get(2).pause();
+                //     }
+                // });
 
                 $('.close-video').click(function(){
                     $('video').get(0).pause();
