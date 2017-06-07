@@ -183,13 +183,41 @@
                 <div class="video-wrapper">
                     <video muted preload="none" autoplay="true" loop poster="./images/our-people-loop.jpg">
                       <source src="./video/our-people-loop.webm" type="video/webm">
-                      <source src="./video/our-people-loop.mp4" type="video/mp4">
+                      <!-- <source src="./video/our-people-loop.mp4" type="video/mp4"> -->
                     </video>
                     <h1>Our people are the reason we've grown year-over-year since 2004. And the reason we'll keep growing.</h1>                    
                 </div>
 
                 <a href="#2" class="arrow light-gray"></a>
+                <!-- Spinner -->
+                <script>
+                    var spinTimer;
+                    var el = document.querySelector('.spinner_hol');
+
+                    function spinner(){
+                        var spinTimer = setTimeout(fadeOut(el), 1500); 
+                    } 
+
+
+                    // fade out
+                    function fadeOut(el){
+                        el.style.opacity = 1;
+
+                        (function fade() {
+                            if ((el.style.opacity -= .1) < 0) {
+                                // el.style.display = "none";
+                                el.className += " hide";
+                            } else {
+                                // requestAnimationFrame(fade);
+                                // el.style.display = "none";
+                                   el.className += " hide";
+
+                            }
+                        })();
+                    }
+                </script>
             </div>
+
 
 
             <div class="section second-sec" id="sec-2">
@@ -287,7 +315,7 @@
           
             </div><!-- end section  -->
 
-              <div class="section leadership-sec" id="sec-lead">
+            <div class="section leadership-sec" id="sec-lead">
            
                 <!-- <div class="slide__row"> -->
                     <div class="slide__col_long slide__col_dark slide__col first-square">
@@ -1102,34 +1130,7 @@
     </div> <!-- End #fullpage -->
 
 
-    <!-- Spinner -->
-    <script>
-        var spinTimer;
-
-        function spinner(){
-            var spinTimer = setTimeout(fadeOut(el), 3000); 
-        } 
-
-        var el = document.querySelector('.spinner_hol');
-
-        // fade out
-        function fadeOut(el){
-            el.style.opacity = 1;
-
-            (function fade() {
-                if ((el.style.opacity -= .1) < 0) {
-                    // el.style.display = "none";
-                    el.className += " hide";
-                } else {
-                    requestAnimationFrame(fade);
-                    // el.style.display = "none";
-                       el.className += " hide";
-
-                }
-            })();
-        }
-    </script>
-
+   
     <!-- contact form -->
     <div class="form-contact">
         <div class="close">
@@ -1294,9 +1295,6 @@
     </script>
     <!-- build:js scripts/plugins.js -->
     <!-- endbuild -->
-     <script charset="ISO-8859-1" src="//fast.wistia.com/assets/external/E-v1.js" async></script>
-    
-    <!-- // <script src="scripts/wistia-fullpage-vid.js"></script> -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
