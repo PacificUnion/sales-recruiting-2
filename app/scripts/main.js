@@ -36,7 +36,7 @@ var bgVideoOptions = {
 window._wq = window._wq || [];
 
 _wq.push({ 
-    id: '57d4w0rtju', //PACE-2017-Loop
+    id: '57d4w0rtju', //our-people-Loop
     onReady: function(video1) {
         video1.play();
     },
