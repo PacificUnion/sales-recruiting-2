@@ -25,7 +25,7 @@
 		top: 39%
 		width: 70%
 		margin-left: 15%
-		transform: translateY(-50%)
+		// transform: translateY(-50%)
 		.badge
 			width: 30%
 			margin: 1rem
@@ -47,7 +47,7 @@
 	&.active
 		opacity: 1
 		.badge
-			@for $i from 1 through 5
+			@for $i from 1 through 9
 				&:nth-child(#{$i})
 					animation: 
 						name: grow
@@ -61,6 +61,12 @@
 		top: 90%
 		z-index: 100
 		left: 50%
+		
+	.badges-sec
+		top: 50%
+		transform: translateY(-50%)
+		.badges
+			top: auto
 
 @media screen and (min-width: 768px)
 	.achievements-wrapper
@@ -115,26 +121,28 @@
 	.achievements-wrapper
 		.badges
 			.badge
-				width: 20%
-			span
-				font-size: 24px
-		.fine-print
-			top: 90%
-			left: 70%	
+				width: 145px
+				height: 145px
+				margin: 10px
+			// span
+			// 	font-size: 24px
+		// .fine-print
+		// 	top: 90%
+		// 	left: 70%	
 @media screen and (min-width: 1440px)
-	.achievements-wrapper
-		.badges
-			.badge
-				width: 12%
+// 	.achievements-wrapper
+// 		.badges
+// 			.badge
+// 				width: 12%
 			
-@media screen and (max-height: 700px) and (min-width: 768px)
-	.achievements-wrapper
-		.badges
-			top: 56%
-			width: 90%
-			margin-left: 5%
-			.badge
-				width: 100px
+// @media screen and (max-height: 700px) and (min-width: 768px)
+// 	.achievements-wrapper
+// 		.badges
+// 			top: 56%
+// 			width: 90%
+// 			margin-left: 5%
+// 			.badge
+// 				width: 100px
 				
 
 							
