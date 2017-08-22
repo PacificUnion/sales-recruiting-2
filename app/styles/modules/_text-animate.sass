@@ -1,0 +1,11 @@
+.text-animate
+	opacity: 0
+	transform: translate(-20px, 0)
+	transition: all 300ms ease-in 0.7s
+
+.section	
+	&.active
+		.text-animate
+			transform: translate(0,0)
+			opacity: 1
+		
