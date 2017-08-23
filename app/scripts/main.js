@@ -77,7 +77,10 @@ $(function() {
         resetSliders: false,
         fadingEffect: false,
         normalScrollElements: null,
-        scrollOverflow: false,
+        
+        // scrollOverflow: false,
+        scrollOverflow: true,
+
         scrollOverflowOptions: null,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
