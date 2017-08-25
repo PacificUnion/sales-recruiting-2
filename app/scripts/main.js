@@ -10,38 +10,37 @@ $(function() {
     }
 });
 
-
-var bgVideoOptions = {
-    version: 'v1',
-    autoPlay: true,
-    controlsVisibleOnLoad: false,
-    fullscreenButton: false,
-    playbar: false,
-    playButton: false,
-    volumeControl: false,
-    volume: 0,
-    settingsControl: false,
-    endVideoBehavior: 'loop',
-    pauseButton: false,
-    playbackRateControl: false,
-    smallPlayButton: false,
-    qualityMax: 720,
-    plugin: {
-       cropFill: {
-            src: '//fast.wistia.com/labs/crop-fill/plugin.js'
+ var bgVideoOptions = {
+        version: 'v1',
+        autoPlay: true,
+        controlsVisibleOnLoad: false,
+        fullscreenButton: false,
+        playbar: false,
+        playButton: false,
+        volumeControl: false,
+        volume: 0,
+        settingsControl: false,
+        endVideoBehavior: 'loop',
+        pauseButton: false,
+        playbackRateControl: false,
+        smallPlayButton: false,
+        qualityMax: 720,
+        plugin: {
+           cropFill: {
+                src: '//fast.wistia.com/labs/crop-fill/plugin.js'
+            }
         }
     }
-}
 
-window._wq = window._wq || [];
+    window._wq = window._wq || [];
 
-_wq.push({ 
-    id: '57d4w0rtju', //our-people-Loop
-    onReady: function(video1) {
-        video1.play();
-    },
-    options: bgVideoOptions
-});
+    _wq.push({ 
+        id: '57d4w0rtju', //our-people-Loop
+        onReady: function(video1) {
+            video1.play();
+        },
+        options: bgVideoOptions
+    });
 
 $(function() {
 
@@ -50,7 +49,7 @@ $(function() {
         //Navigation
         menu: false,
         lockAnchors: false,
-        anchors: ['Home', 'Testimonials', 'Leadership', 'Growth', 'Culture', 'Contact-Us'],
+        anchors: ['Home', 'Testimonials', 'Leadership', 'Growth','Employee-Growth','Company-Achievements','Company-Volume', 'Culture', 'Contact-Us'],
         navigation: false,
         navigationPosition: 'left',
         navigationTooltips: [],
@@ -95,7 +94,7 @@ $(function() {
         controlArrows: true,
         verticalCentered: true,
 
-        fixedElements: '.nav-wrapper, .menu, .form-contact, .video-overlay, .spinner_hol ',
+        fixedElements: '.nav-wrapper, .menu, .form-contact, .video-overlay, .spinner_hol, .quarter-block, .growth-sec-content',
         responsiveWidth: 768,
         responsiveHeight: 0,
         responsiveSlides: null,
@@ -108,24 +107,66 @@ $(function() {
         onLeave: function(index, nextIndex, direction) {
 
             if (index == 2 && nextIndex == 1) {
-                
                 $('#fp-nav').css('display', 'none');
                 $('.logo-wrapper').css('display', 'block');
-               
             }
-
-            if (index == 4 && nextIndex == 5) {
-               
-                $('.block-2').removeClass('active'),
-                $('.block-3').removeClass('active'),
-                $('.block-4').removeClass('active'),
-                $('.achievements-wrapper').removeClass('active'),
-                $('.graph-wrapper').removeClass('active'),
-                $('.volume-wrapper').removeClass('active'),
+            if (index == 4 && nextIndex == 3) {
+                $('.quarter-block').removeClass('active'),
+                $('.block-1').removeClass('active'),
+                $('.map-wrapper').removeClass('active');
+            }
+            if (index == 3 && nextIndex == 4) {
+                $('.quarter-block').addClass('active'),
                 $('.block-1').addClass('active'),
                 $('.map-wrapper').addClass('active');
             }
-           
+             if (index == 5 && nextIndex == 4) {
+                $('.block-1').addClass('active'),
+                $('.map-wrapper').addClass('active'),
+                $('.block-2').removeClass('active'),
+                $('.graph-wrapper').removeClass('active');
+            }
+            if (index == 4 && nextIndex == 5) {
+                $('.block-1').removeClass('active'),
+                $('.map-wrapper').removeClass('active'),
+                $('.block-2').addClass('active'),
+                $('.graph-wrapper').addClass('active');
+            }
+            if (index == 6 && nextIndex == 5) {
+                $('.block-3').removeClass('active'),
+                $('.achievements-wrapper').removeClass('active'),
+                $('.block-2').addClass('active'),
+                $('.graph-wrapper').addClass('active');
+            }
+            if (index == 5 && nextIndex == 6) {
+                $('.block-2').removeClass('active'),
+                $('.graph-wrapper').removeClass('active'),
+                $('.block-3').addClass('active'),
+                $('.achievements-wrapper').addClass('active');
+            }
+            if (index == 7 && nextIndex == 6) {
+                $('.block-4').removeClass('active'),
+                $('.volume-wrapper').removeClass('active'),
+                $('.block-3').addClass('active'),
+                $('.achievements-wrapper').addClass('active');
+            }
+            if (index == 6 && nextIndex == 7) {
+                $('.block-3').removeClass('active'),
+                $('.achievements-wrapper').removeClass('active'),
+                $('.block-4').addClass('active'),
+                $('.volume-wrapper').addClass('active');
+            }
+            if (index == 8 && nextIndex == 7) {
+                $('.quarter-block').addClass('active'),
+                $('.block-4').addClass('active'),
+                $('.volume-wrapper').addClass('active');
+            }
+            if (index == 7 && nextIndex == 8) {
+                $('.quarter-block').removeClass('active'),
+                $('.block-4').removeClass('active'),
+                $('.volume-wrapper').removeClass('active');
+            }
+              
             if (index == 10 && nextIndex == 11) {
 
                 $('#fp-nav').css('display', 'none');
@@ -134,17 +175,15 @@ $(function() {
         }, //End onLeave
 
         afterLoad: function(anchorLink, index) {
-            if (index == 1 || index >= 11) {
-
-            }
             if (index == 1) {
-                
+
             } else {
                 $('.logo-wrapper').css('display', 'none');
             }
             if (index == 2) {
                 $('.local a[href="#Testimonials"]').addClass('active');
                 $('.logo-wrapper').css('display', 'none');
+               
             } else {
                 $('.local a[href="#Testimonials"]').removeClass('active');                           
             }
@@ -152,29 +191,34 @@ $(function() {
                 $('.local a[href="#Leadership"]').addClass('active');
             } else {
                 $('.local a[href="#Leadership"]').removeClass('active');
-            }
-            if (index == 4) {
-                $('.local a[href="#Growth"]').addClass('active');
-                $('.block-1').addClass('active'),
-                $('.block-2').removeClass('active'),
-                $('.block-3').removeClass('active'),
-                $('.block-4').removeClass('active'),
-                $('.map-wrapper').addClass('active'),
-                $('.achievements-wrapper').removeClass('active'),
-                $('.graph-wrapper').removeClass('active'),
-                $('.volume-wrapper').removeClass('active');
-            } else {
-                $('.local a[href="#Growth"]').removeClass('active');
-            }
-            if (index == 5) {
-                $('.local a[href="#Culture"]').addClass('active');
-            } else {
-                $('.local a[href="#Culture"]').removeClass('active');
-            }
-            if (index == 1 || index == 3 || index == 4) {
+            }           
+            
+
+            if (index == 1 || index == 3 ) {
                 $('nav .nav-title a').css('text-shadow', 'none');
             } else {
                 $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
+            }
+          
+            if ( index == 4 ){
+                $('.quarter-block').addClass('active'),
+                $('.map-wrapper').addClass('active'),
+                $('.block-1').addClass('active');
+            }
+            if ( index == 5 ){
+                $('.quarter-block').addClass('active'),
+                $('.graph-wrapper').addClass('active'),
+                $('.block-2').addClass('active');
+            }
+            if ( index == 6 ){
+                $('.quarter-block').addClass('active'),
+                $('.achievements-wrapper').addClass('active'),
+                $('.block-3').addClass('active');
+            }
+            if ( index == 7 ){
+                $('.quarter-block').addClass('active'),
+                $('.volume-wrapper').addClass('active'),
+                $('.block-4').addClass('active');
             }
 
         }, //End afterLoad
@@ -185,14 +229,12 @@ $(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {},
 
         afterRender: function() {
+
             $('#nav-icon').click(function() {
                 $(this).toggleClass('open'),
                     $('.menu').toggleClass('active'),
                     $('.nav-local').toggleClass('active');
             });
-
-            
-
             $('.block-1').click(function() {
                 $('.block-1').addClass('active'),
                 $('.block-2').removeClass('active'),
@@ -202,6 +244,7 @@ $(function() {
                 $('.achievements-wrapper').removeClass('active'),
                 $('.graph-wrapper').removeClass('active');
                 $('.volume-wrapper').removeClass('active');
+                $.fn.fullpage.moveTo(4);
             });
             $('.block-2').click(function() {
                 $('.block-2').addClass('active'),
@@ -212,6 +255,7 @@ $(function() {
                 $('.achievements-wrapper').removeClass('active'),
                 $('.graph-wrapper').addClass('active');
                 $('.volume-wrapper').removeClass('active');
+                $.fn.fullpage.moveTo(5);
             });
             $('.block-3').click(function() {
                 $('.block-3').addClass('active'),
@@ -222,6 +266,7 @@ $(function() {
                 $('.graph-wrapper').removeClass('active'),
                 $('.achievements-wrapper').addClass('active');
                 $('.volume-wrapper').removeClass('active');
+                $.fn.fullpage.moveTo(6);
             });
 
             $('.block-4').click(function() {
@@ -233,6 +278,7 @@ $(function() {
                 $('.graph-wrapper').removeClass('active'),
                 $('.achievements-wrapper').removeClass('active'),
                 $('.volume-wrapper').addClass('active');
+                $.fn.fullpage.moveTo(7);
             });
 
             $('.close-video').click(function() {               
@@ -284,3 +330,66 @@ $(function() {
     }); //End $('#fullpage')
 
 });
+
+
+ // $('.block-2').removeClass('active'),
+                // $('.block-3').removeClass('active'),
+                // $('.block-4').removeClass('active'),
+                // $('.graph-wrapper').removeClass('active'),
+                // $('.achievements-wrapper').removeClass('active'),
+                // $('.volume-wrapper').removeClass('active');
+
+            // if (index == 4) {
+            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
+            //     $('.local a[href="#Growth"]').addClass('active');
+            //     $('.block-1').addClass('active'),
+            //     $('.map-wrapper').addClass('active'),
+
+            //     $('.block-2').removeClass('active'),
+            //     $('.block-3').removeClass('active'),
+            //     $('.block-4').removeClass('active'),
+            //     $('.graph-wrapper').removeClass('active'),
+            //     $('.achievements-wrapper').removeClass('active'),
+            //     $('.volume-wrapper').removeClass('active');
+            // }
+
+            // if (index == 5) {
+            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
+            //     $('.block-2').addClass('active'),
+            //     $('.graph-wrapper').addClass('active'),
+
+            //     $('.block-1').removeClass('active'),
+            //     $('.block-3').removeClass('active'),
+            //     $('.block-4').removeClass('active'),
+            //     $('.map-wrapper').removeClass('active'),
+            //     $('.achievements-wrapper').removeClass('active'),
+            //     $('.volume-wrapper').removeClass('active');
+            // }
+
+            // if (index == 6) {
+            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
+            //     $('.block-3').addClass('active'),
+            //     $('.achievements-wrapper').addClass('active'),
+                
+            //     $('.block-1').removeClass('active'),
+            //     $('.block-2').removeClass('active'),
+            //     $('.block-4').removeClass('active'),
+            //     $('.map-wrapper').removeClass('active'),
+            //     $('.graph-wrapper').removeClass('active'),
+            //     $('.volume-wrapper').removeClass('active');
+            // }
+            // if (index == 7) {
+            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
+            //     $('.block-4').addClass('active'),
+            //     $('.volume-wrapper').addClass('active'),
+                
+            //     $('.block-1').removeClass('active'),
+            //     $('.block-2').removeClass('active'),
+            //     $('.block-3').removeClass('active'),
+            //     $('.map-wrapper').removeClass('active'),
+            //     $('.achievements-wrapper').removeClass('active'),
+            //     $('.graph-wrapper').removeClass('active');
+            // }
+            // if (index == 7 && nextIndex == 8) {
+
+            // }

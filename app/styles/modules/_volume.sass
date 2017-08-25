@@ -5,9 +5,8 @@
 	position: absolute
 	top: 20%
 	opacity: 0 
-	transition: opacity 300ms ease-in 	 
-	// transform: scale(0.5)
-	// transition: all 500ms ease-in 400ms
+	transition: opacity 300ms ease-in
+	z-index: -1
 	.graph-lines
 		background-image: url(../images/graph/graph-lines-vol.png)
 		background-size: 80% 
@@ -55,6 +54,7 @@
 				margin-bottom: 0
 	&.active
 		opacity: 1
+		z-index: 1
 		.bar
 			@for $i from 1 through 7
 				&:nth-child(#{$i})
