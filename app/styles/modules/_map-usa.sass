@@ -22,7 +22,7 @@
 						fill-mode: forwards
 				// transform: translate(0px, 0px) scale(1)
 	.map-usa
-		background: url(../images/map/map-us-mobile.png)
+		background-image: url(../images/map/map-us-mobile.png)
 		background-size: 80%
 		background-position: center
 		background-repeat: no-repeat 
@@ -146,51 +146,21 @@
 		
 @media screen and (min-width: 768px)
 	.map-wrapper
-		// background: url(../images/map/gray-bg.png) 
-		// background-position: center
-		// background-size: cover 
-		// background-repeat: no-repeat 
 		height: 100%
 		width: 75%
 		left: 25%
-		position: absolute
 		top: 0
-		opacity: 0
-		// padding-bottom: 56.25%
-		// padding-bottom: 90% 
-		overflow: hidden
-		transition: opacity 300ms ease-in
-		&.active
-			opacity: 1
-			.pin
-				@for $i from 1 through 4
-					&:nth-child(#{$i})
-						animation: 
-							name: ping
-							duration: 500ms
-							delay: (150ms * $i)
-							timing-function: ease-in-out
-							fill-mode: forwards
-					// transform: translate(0px, 0px) scale(1)
+
 		.map-usa
-			background: url(../images/map/map-us.png)
-			background-size: 80%
-			background-position: center
-			background-repeat: no-repeat 
-			position: absolute 
-			width: 100%
-			height: 100%
-			left: 0
-			padding-bottom: 63.32%
+			background-image: url(../images/map/map-us.png)
+			
 		.map-text
-			color: $white
-			font-family: 'Gotham Book'
-			font-size: 1.5rem 
-			top: 10% 
-			position: absolute
+			font-size: 16px
+			top: 15%
 			width: 70%
 			margin-left: 15%
 			line-height: 3rem
+			
 		.pin-container
 			position: absolute
 			width: 80%
@@ -204,39 +174,11 @@
 			transform: translate(0px, -30px) scale(0)
 			img
 				width: 20px
-				height: 25px
-				
-			&-1
-				top: 43%
-				left: 14.5%
-				.tooltip
-					left: -11%
-			&-2
-				top: 61%
-				left: 49%
-				.tooltip
-					left: -25%
-			&-3
-				top: 43.5%
-				left: 82%
-				.tooltip
-					left: -25%
-					top: -90%
-			&-4
-				top: 49%
-				left: 80%
-				.tooltip
-					left: -25%
+				height: 25px			
 				
 			.tooltip
-				position: absolute
-				opacity: 0
-				color: $white
-				font-family: "Gotham Book"
 				font-size: 1.5rem
-				text-align: center
-				transform: scale(0)  
-				transition: all 300ms ease-in
+				
 			&:hover
 				.tooltip
 					opacity: 1

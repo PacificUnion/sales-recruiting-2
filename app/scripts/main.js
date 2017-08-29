@@ -77,8 +77,8 @@ $(function() {
         fadingEffect: false,
         normalScrollElements: null,
         
-        // scrollOverflow: false,
-        scrollOverflow: true,
+        scrollOverflow: false,
+        // scrollOverflow: true,
 
         scrollOverflowOptions: null,
         touchSensitivity: 15,
@@ -197,7 +197,7 @@ $(function() {
             if (index == 1 || index == 3 ) {
                 $('nav .nav-title a').css('text-shadow', 'none');
             } else {
-                $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
+                // $('nav .nav-title a').css('text-shadow', '2px 2px 4px #686868');
             }
           
             if ( index == 4 ){
@@ -330,66 +330,3 @@ $(function() {
     }); //End $('#fullpage')
 
 });
-
-
- // $('.block-2').removeClass('active'),
-                // $('.block-3').removeClass('active'),
-                // $('.block-4').removeClass('active'),
-                // $('.graph-wrapper').removeClass('active'),
-                // $('.achievements-wrapper').removeClass('active'),
-                // $('.volume-wrapper').removeClass('active');
-
-            // if (index == 4) {
-            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
-            //     $('.local a[href="#Growth"]').addClass('active');
-            //     $('.block-1').addClass('active'),
-            //     $('.map-wrapper').addClass('active'),
-
-            //     $('.block-2').removeClass('active'),
-            //     $('.block-3').removeClass('active'),
-            //     $('.block-4').removeClass('active'),
-            //     $('.graph-wrapper').removeClass('active'),
-            //     $('.achievements-wrapper').removeClass('active'),
-            //     $('.volume-wrapper').removeClass('active');
-            // }
-
-            // if (index == 5) {
-            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
-            //     $('.block-2').addClass('active'),
-            //     $('.graph-wrapper').addClass('active'),
-
-            //     $('.block-1').removeClass('active'),
-            //     $('.block-3').removeClass('active'),
-            //     $('.block-4').removeClass('active'),
-            //     $('.map-wrapper').removeClass('active'),
-            //     $('.achievements-wrapper').removeClass('active'),
-            //     $('.volume-wrapper').removeClass('active');
-            // }
-
-            // if (index == 6) {
-            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
-            //     $('.block-3').addClass('active'),
-            //     $('.achievements-wrapper').addClass('active'),
-                
-            //     $('.block-1').removeClass('active'),
-            //     $('.block-2').removeClass('active'),
-            //     $('.block-4').removeClass('active'),
-            //     $('.map-wrapper').removeClass('active'),
-            //     $('.graph-wrapper').removeClass('active'),
-            //     $('.volume-wrapper').removeClass('active');
-            // }
-            // if (index == 7) {
-            //     $('.growth-sec-content, .quarter-block').css('display', 'block');
-            //     $('.block-4').addClass('active'),
-            //     $('.volume-wrapper').addClass('active'),
-                
-            //     $('.block-1').removeClass('active'),
-            //     $('.block-2').removeClass('active'),
-            //     $('.block-3').removeClass('active'),
-            //     $('.map-wrapper').removeClass('active'),
-            //     $('.achievements-wrapper').removeClass('active'),
-            //     $('.graph-wrapper').removeClass('active');
-            // }
-            // if (index == 7 && nextIndex == 8) {
-
-            // }
