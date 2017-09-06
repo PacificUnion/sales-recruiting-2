@@ -947,10 +947,52 @@
             </div> <!-- end leadership-sec -->
 
             <!-- Growth-sec -->
-            <div class="section growth-sec" id="sec-3"></div>
-            <div class="section growth-sec"></div>
-            <div class="section growth-sec"></div>
-            <div class="section growth-sec"></div>
+            <div class="section growth-sec">
+                <div id="slide-container" class="slide-container carouselbox " role="listbox">
+                    <!-- <div id="overlay" class="overlay"></div> -->
+                    <div class="left glyphicon glyphicon-chevron-left"></div>
+                    <div class="right glyphicon glyphicon-chevron-right"></div>
+                    <ul class="content">
+
+                        <!-- National Footprint -->
+                        <li id="footprint" class="modal current">
+                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg" alt="" class="achievements">
+
+                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-a">
+                               <span>Close</span>
+                            </div> -->
+                        </li>
+
+                        <!-- Employee Growth -->
+                        <li id="employees" class="modal">
+                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
+                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-b">
+                               <span>Close</span>
+                            </div> -->
+                        </li>
+                        
+                        <!-- Achievements -->
+                        <li id="achievements" class="modal">
+                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
+                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-c">
+                               <span>Close</span>
+                            </div> -->
+                        </li>
+
+                        <!-- Volume -->
+                        <li id="volume" class="modal">
+                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
+                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-d">
+                               <span>Close</span>
+                            </div> -->
+                        </li>
+
+                    </ul>
+                </div><!-- End #slide-container -->
+            </div>
+            <div class="section growth-sec desktop"></div>
+            <div class="section growth-sec desktop"></div>
+            <div class="section growth-sec desktop"></div>
 
             <div class="section culture-sec" id="sec-4">
                 <div class="gridded">
@@ -1250,7 +1292,6 @@
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="/bower_components/fullpage.js/vendors/scrolloverflow.min.js"></script>
     <script src="/bower_components/fullpage.js/dist/jquery.fullpage.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->

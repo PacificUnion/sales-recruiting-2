@@ -3,6 +3,7 @@
 
     // Read necessary elements from the DOM once
     var box = document.querySelector('.carousel-box');
+    // var box2 = document.querySelector('.carousel-box2');
     var next = document.querySelector('.c-next');
     var prev = document.querySelector('.c-prev');
 
@@ -10,15 +11,20 @@
     // current item 
     var counter = 0;
     var items = box.querySelectorAll('.content li');
+    // var items2 = box2.querySelectorAll('.content li');
     var amount = items.length;
+    // var amount2 = items2.length;
     var current = items[0];
+    // var current2 = items2[0];
     box.classList.add('active');
+    // box2.classList.add('active');
 
     // navigate through the carousel
     function navigate(direction) {
 
         // hide the old current list item 
         current.classList.remove('current');
+        // current2.classList.remove('current');
 
         // calculate th new position
         counter = counter + direction;
@@ -30,6 +36,7 @@
         if (direction === -1 && counter < 0) { 
             counter = amount - 1; 
         }
+        
 
         // if the next button was clicked and there 
         // is no items element, set the counter 
@@ -42,6 +49,8 @@
         // and add CSS class
         current = items[counter];
         current.classList.add('current');
+        // current2 = items2[counter];
+        // current2.classList.add('current');
     }
 
     // add event handlers to buttons

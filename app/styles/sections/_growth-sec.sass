@@ -1,8 +1,17 @@
 .growth-sec
 	background-color: #464646
-	// background-image: url(../images/gray-bg.png)
 	position: relative
 		
+	.left
+		left: 0
+		position: absolute
+		top: 15%
+	.right
+		position: absolute
+		right: 0
+		top: 15%
+	.growth-sec-content
+		position: fixed
 	.button-green
 		position: relative
 		background-color: transparent 
@@ -10,61 +19,7 @@
 .quarter-block
 	display: none
 
-	.block
-		height: 100%
-		width: 33.33%
-		width: 25%
-		top: 0
-		font-family: $h1-ff
-		font-size: $h2-fs-sm - 4px
-		color: $white
-		text-align: center
-		position: relative
-		cursor: pointer
-		float: left
-		display: flex
-		align-items: center
-		&::before
-			content: ''
-			position: absolute
-			width: 0
-			height: 0
-			box-sizing: content-box
-			border: 2rem solid
-			top: 99%
-			// transform: translateY(-50%)
-			left: 29%
-			right: auto
-			z-index: 1
-			border-color: $blue transparent transparent transparent 
-			opacity: 0
-			transition: all 150ms ease-in
-			
-		&-1, &-4
-			background-color: $green
-			&::before
-				border-color: $green transparent transparent transparent 
-		&-2
-		 	background-color: $dark-gray
-		 	
-		&-3
-		 	background-color: $blue
-		
-	 		
-		span
-			position: absolute
-			height: 3rem
-			width: 100%
-			top: 50%
-			margin-top: -1.5rem
-			left: 0
-			
-		&.active
-			&::before
-				opacity: 1
-	.block-2
-		&::before
-			border-color: $dark-gray transparent transparent transparent 
+	
 
 @media screen and (min-width: 768px)
 	.growth-sec
@@ -88,7 +43,8 @@
 		transition: opacity 300ms ease-in
 		&.active
 		 	z-index: 1
-		 	opacity: 1 
+		 	opacity: 1
+
 		.block
 			// height: 33.33%
 			height: 25%
