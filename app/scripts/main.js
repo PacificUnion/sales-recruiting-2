@@ -328,78 +328,7 @@ $(function() {
                 $(this).closest('.slide__col_quoted').nextAll('.slide__col_quoted:first').addClass('active');
             });
 
-            //product page/ carousel navigation
-            var overlay = document.getElementById('overlay');
-            var carousel = document.getElementById('slide-container');
-
-            var a = document.getElementById('footprint');
-            var b = document.getElementById('employees');
-            var c = document.getElementById('achievements');
-            var d = document.getElementById('volume');           
-           
-            var items = carousel.querySelectorAll('.content li');
-            // var current = items[0];
-           
-            function displayModalA(){
-                carousel.classList.add('active');
-                a.classList.add('current');
-                navigate(0);
-            }
-            function displayModalB(){
-                carousel.classList.add('active');
-                b.classList.add('current');
-                navigate(1);
-            }
-            function displayModalC(){
-                carousel.classList.add('active');
-                c.classList.add('current');
-                navigate(2);
-            }
-            function displayModalD(){
-                carousel.classList.add('active');
-                d.classList.add('current');
-                navigate(3);
-            }
-console.log('test');
-            // carousel naviagtion
-            var box = document.querySelector('.carouselbox');
-            var next = box.querySelector('.left');
-            var prev = box.querySelector('.right');
-            var items = box.querySelectorAll('.content li');
-            var counter = 0;
-            var amount = items.length;
-            var current = items[0];
-            // box.classList.add('active');
-            function navigate(direction) {
-                
-                current.classList.remove('current');
-                counter = counter + direction;
-                console.log(counter);
-
-                if (direction === -1 && 
-                    counter < 0) { 
-                    counter = amount - 1; 
-                }
-                if (direction === 1 && 
-                    !items[counter]) { 
-                    counter = 0;
-                }
-                current = items[counter];
-                current.classList.add('current');
-            }
-
-            next.addEventListener('click', function(ev) {
-                navigate(1);
-                console.log('next');
-            });
-            prev.addEventListener('click', function(ev) {
-                navigate(-1);
-                console.log('prev');
-            });
-
-            navigate(0);
-            // closeModal();
-
+  
 
         } //End afterRender
 

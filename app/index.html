@@ -948,47 +948,35 @@
 
             <!-- Growth-sec -->
             <div class="section growth-sec">
-                <div id="slide-container" class="slide-container carouselbox " role="listbox">
-                    <!-- <div id="overlay" class="overlay"></div> -->
-                    <div class="left glyphicon glyphicon-chevron-left"></div>
-                    <div class="right glyphicon glyphicon-chevron-right"></div>
-                    <ul class="content">
+                <div class="ca-container" id="ca-container">
+                    <div class="ca-wrapper">                     
 
                         <!-- National Footprint -->
-                        <li id="footprint" class="modal current">
-                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/140.jpg" alt="" class="achievements">
-
-                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-a">
-                               <span>Close</span>
-                            </div> -->
-                        </li>
+                        <div id="footprint" class="ca-item ca-item-1">
+                            <div class="title">National Footprint</div>
+                            <img src="./images/map-us.png" alt="" class="achievements growth-img">
+                        </div>
 
                         <!-- Employee Growth -->
-                        <li id="employees" class="modal">
-                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
-                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-b">
-                               <span>Close</span>
-                            </div> -->
-                        </li>
+                        <div id="employees" class="ca-item ca-item-2">
+                            <div class="title">Employee Growth</div>
+                            <img src="./images/employee-graph.png" alt="" class="volume growth-img">
+                        </div>
                         
                         <!-- Achievements -->
-                        <li id="achievements" class="modal">
-                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
-                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-c">
-                               <span>Close</span>
-                            </div> -->
-                        </li>
+                        <div id="achievements" class="ca-item ca-item-3">
+                            <div class="title">Company Achievements</div>
+                            <img src="./images/achievements.png" alt="" class="volume growth-img">
+                        </div>
 
                         <!-- Volume -->
-                        <li id="volume" class="modal">
-                            <img src="http://placekitten.com.s3.amazonaws.com/homepage-samples/200/287.jpg" alt="" class="volume">
-                            <!-- <div class="close  glyphicon glyphicon-remove-circle" id="close-d">
-                               <span>Close</span>
-                            </div> -->
-                        </li>
+                        <div id="volume" class="ca-item ca-item-4">
+                            <div class="title">Company Volume</div>
+                            <img src="./images/volume-graph.png" alt="" class="volume growth-img">
+                        </div>
 
-                    </ul>
-                </div><!-- End #slide-container -->
+                    </div>
+                </div>
             </div>
             <div class="section growth-sec desktop"></div>
             <div class="section growth-sec desktop"></div>
@@ -1334,12 +1322,18 @@
                 }
     </script>
     <!-- build:js scripts/plugins.js -->
+    <script type="text/javascript" src="scripts/jquery.easing.1.3.js"></script>
+    <script type="text/javascript" src="scripts/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="scripts/jquery.contentcarousel.js"></script>
     <!-- endbuild -->
 
     <!-- build:js scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/carousel.js"></script>
+    <script type="text/javascript">
+        $('#ca-container').contentcarousel();
+    </script>
     <!-- endbuild -->
 
+    <!-- // <script src="scripts/carousel.js"></script> -->
     </body>
 </html>
