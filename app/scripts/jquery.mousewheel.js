@@ -38,11 +38,11 @@ $.event.special.mousewheel = {
 
 $.fn.extend({
     mousewheel: function(fn) {
-        return fn ? this.bind("mousewheel", fn) : this.trigger("mousewheel");
+        return fn ? this.bind('mousewheel', fn) : this.trigger('mousewheel');
     },
     
     unmousewheel: function(fn) {
-        return this.unbind("mousewheel", fn);
+        return this.unbind('mousewheel', fn);
     }
 });
 
@@ -50,7 +50,7 @@ $.fn.extend({
 function handler(event) {
     var orgEvent = event || window.event, args = [].slice.call( arguments, 1 ), delta = 0, returnValue = true, deltaX = 0, deltaY = 0;
     event = $.event.fix(orgEvent);
-    event.type = "mousewheel";
+    event.type = 'mousewheel';
     
     // Old school scrollwheel delta
     if ( event.wheelDelta ) { delta = event.wheelDelta/120; }
